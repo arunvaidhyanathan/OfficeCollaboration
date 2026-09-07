@@ -1,16 +1,17 @@
-# Compiled class file
+# --- Secrets -- never commit these ---------------------------------------------------------------
+.env
+.env.bak
+.env.*.bak
+
+# --- OS / editor cruft ----------------------------------------------------------------------------
+.DS_Store
+.claude/
+
+# --- Java / Maven (generic; backend/.gitignore also covers target/ specifically) ------------------
 *.class
-
-# Log file
 *.log
-
-# BlueJ files
 *.ctxt
-
-# Mobile Tools for Java (J2ME)
 .mtj.tmp/
-
-# Package Files #
 *.jar
 *.war
 *.nar
@@ -18,7 +19,8 @@
 *.zip
 *.tar.gz
 *.rar
-
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+# Stray Vite temp config files it sometimes leaves behind after a build
+vite.config.*.timestamp-*

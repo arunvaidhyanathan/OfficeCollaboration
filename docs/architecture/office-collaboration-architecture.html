@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Office Collaboration Platform — Architecture Decision Record</title>
+<style>
+  :root{
+    --ink:#1a1d23; --ink-soft:#4b5563; --line:#d9dee5; --line-soft:#e8ecf1;
+    --bg:#ffffff; --bg-soft:#f6f8fa; --bg-code:#f1f3f6;
+    --accent:#8a3b12; --accent-bg:#fdf3ea;
+    --good:#0f6b3f; --good-bg:#eaf7f0;
+    --bad:#a3242c; --bad-bg:#fcecec;
+    --warn:#8a6d00; --warn-bg:#fdf6e0;
+    --mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--bg-soft); color:var(--ink); font-family:var(--sans);
+    font-size:14px; line-height:1.55;
+  }
+  .page{max-width:960px; margin:0 auto; background:var(--bg); padding:48px 56px 80px;}
+  .doc-header{border-bottom:3px solid var(--ink); padding-bottom:18px; margin-bottom:28px;}
+  .doc-kicker{font-size:11px; text-transform:uppercase; letter-spacing:.09em; color:var(--ink-soft); font-weight:700;}
+  h1.doc-title{font-size:26px; margin:6px 0 10px; letter-spacing:-.01em;}
+  .doc-meta{display:flex; flex-wrap:wrap; gap:6px 22px; font-size:12px; color:var(--ink-soft);}
+  .doc-meta b{color:var(--ink);}
+  h2{
+    font-size:18px; margin:40px 0 4px; padding-bottom:6px; border-bottom:1px solid var(--line);
+    display:flex; align-items:baseline; gap:10px;
+  }
+  h2 .num{color:var(--accent); font-variant-numeric:tabular-nums;}
+  h3{font-size:14.5px; margin:22px 0 8px; color:var(--ink);}
+  h4{font-size:13px; margin:16px 0 6px; color:var(--ink-soft); text-transform:uppercase; letter-spacing:.04em;}
+  p{margin:8px 0;}
+  a{color:var(--accent);}
+  .lede{font-size:14.5px; color:var(--ink-soft); margin:6px 0 18px;}
+  table{width:100%; border-collapse:collapse; margin:12px 0 18px; font-size:12.6px;}
+  caption{caption-side:top; text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.05em; color:var(--ink-soft); margin-bottom:4px; font-weight:700;}
+  th,td{border:1px solid var(--line); padding:7px 10px; text-align:left; vertical-align:top;}
+  th{background:var(--bg-soft); font-weight:700; font-size:11.5px; text-transform:uppercase; letter-spacing:.03em;}
+  tr:nth-child(even) td{background:#fbfcfd;}
+  code{font-family:var(--mono); background:var(--bg-code); padding:1px 5px; border-radius:3px; font-size:.92em;}
+  pre{
+    background:#20242c; color:#e6e9ef; padding:14px 16px; border-radius:6px; overflow-x:auto;
+    font-family:var(--mono); font-size:12px; line-height:1.5; margin:10px 0 16px;
+  }
+  pre code{background:none; padding:0; color:inherit;}
+  .callout{border-left:4px solid var(--ink-soft); background:var(--bg-soft); padding:10px 14px; margin:14px 0; border-radius:0 4px 4px 0; font-size:13px;}
+  .callout.decision{border-color:var(--good); background:var(--good-bg);}
+  .callout.risk{border-color:var(--bad); background:var(--bad-bg);}
+  .callout.warn{border-color:var(--warn); background:var(--warn-bg);}
+  .callout.info{border-color:var(--accent); background:var(--accent-bg);}
+  .callout .label{font-weight:700; text-transform:uppercase; font-size:10.5px; letter-spacing:.06em; display:block; margin-bottom:3px;}
+  .tag{display:inline-block; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.04em; padding:2px 7px; border-radius:10px; margin-right:4px;}
+  .tag.keep{background:var(--good-bg); color:var(--good);}
+  .tag.fix{background:var(--bad-bg); color:var(--bad);}
+  .tag.new{background:var(--accent-bg); color:var(--accent);}
+  .tag.watch{background:var(--warn-bg); color:var(--warn);}
+  .adr{border:1px solid var(--line); border-radius:6px; margin:14px 0 22px; overflow:hidden;}
+  .adr-head{background:var(--ink); color:#fff; padding:10px 16px; font-size:13px; display:flex; justify-content:space-between; align-items:center;}
+  .adr-head .id{font-family:var(--mono); opacity:.75; font-size:11px;}
+  .adr-status{font-size:10px; text-transform:uppercase; letter-spacing:.05em; padding:2px 9px; border-radius:10px; background:#3a3f4a;}
+  .adr-body{padding:14px 18px 6px;}
+  .diagram{
+    background:var(--bg-soft); border:1px solid var(--line); border-radius:6px; padding:20px;
+    font-family:var(--mono); font-size:11.5px; margin:14px 0 18px; overflow-x:auto; white-space:pre;
+  }
+  .box-diagram{display:flex; flex-direction:column; gap:0; font-family:var(--mono); font-size:11.5px; margin:14px 0 18px;}
+  .row{display:flex; gap:10px; margin-bottom:10px; justify-content:center; flex-wrap:wrap;}
+  .box{border:1.5px solid var(--ink); border-radius:5px; padding:8px 12px; background:#fff; text-align:center; flex:1; min-width:130px;}
+  .box.svc{background:var(--accent-bg); border-color:var(--accent);}
+  .box.data{background:var(--good-bg); border-color:var(--good);}
+  .box.edge{background:var(--bg-soft); border-color:var(--ink-soft);}
+  .box .t{font-weight:700; font-size:12px;}
+  .box .s{color:var(--ink-soft); font-size:10.5px; display:block; margin-top:2px;}
+  .arrow{text-align:center; font-size:14px; color:var(--ink-soft); margin:-2px 0;}
+  ol.steps{padding-left:20px; margin:8px 0;}
+  ol.steps li{margin:4px 0;}
+  .toc{background:var(--bg-soft); border:1px solid var(--line); border-radius:6px; padding:14px 20px; margin:18px 0 30px; font-size:12.5px; columns:2; column-gap:30px;}
+  .toc a{color:var(--ink); text-decoration:none; display:block; padding:2px 0;}
+  .toc a:hover{color:var(--accent);}
+  .refs{font-size:12px;}
+  .refs li{margin:4px 0;}
+  footer{margin-top:50px; padding-top:14px; border-top:1px solid var(--line); font-size:11px; color:var(--ink-soft);}
+  @media print{
+    body{background:#fff;}
+    .page{max-width:none; padding:0 8px;}
+    h2{page-break-after:avoid;}
+    .adr,table,.diagram,.box-diagram,pre{page-break-inside:avoid;}
+    a{color:var(--ink);}
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="doc-header">
+    <div class="doc-kicker">Architecture Decision Record — Draft for Review</div>
+    <h1 class="doc-title">Office Collaboration Platform: Frontend Topology, Microservice Boundaries &amp; ONLYOFFICE Integration</h1>
+    <div class="doc-meta">
+      <span><b>Prepared for:</b> Arun Srinivas</span>
+      <span><b>Date:</b> September 6, 2026 · reviewed against the as-built code September 7, 2026</span>
+      <span><b>Status:</b> MVP implemented and reviewed — as-built findings in §0.2</span>
+      <span><b>Scope:</b> React/TS SPA · Java/Spring Boot "Document Core" · ONLYOFFICE (Community, self-hosted) · nginx · Supabase Postgres · S3 · AI/Parsing deferred to Phase 2</span>
+    </div>
+  </div>
+
+  <div class="toc">
+    <a href="#exec">0. Executive summary &amp; decision snapshot</a>
+    <a href="#poc-scope">0.1 POC scope lock (confirmed)</a>
+    <a href="#asbuilt">0.2 As-built status (reviewed Sept 7, 2026)</a>
+    <a href="#reqs">1. Requirements recap</a>
+    <a href="#adr1">2. ADR-001 — Monolithic SPA vs. Micro-Frontends</a>
+    <a href="#adr2">3. ADR-002 — MFE framework: Module Federation vs. single-spa</a>
+    <a href="#adr3">4. ADR-003 — Backend service boundaries</a>
+    <a href="#adr4">5. ADR-004 — ONLYOFFICE edition, licensing &amp; scaling</a>
+    <a href="#arch">6. Corrected end-to-end architecture</a>
+    <a href="#flows">7. Corrected sequence flows</a>
+    <a href="#review">8. Line-by-line review of your blueprint</a>
+    <a href="#data">9. Data model &amp; pgvector indexing</a>
+    <a href="#deploy">10. Deployment topology &amp; capacity planning</a>
+    <a href="#open">11. Open decisions needing your input</a>
+    <a href="#refs">12. References (official sources)</a>
+  </div>
+
+  <h2 id="exec"><span class="num">0.</span> Executive summary &amp; decision snapshot</h2>
+  <p class="lede">Your blueprint is fundamentally sound — application-owns-lifecycle, ONLYOFFICE-as-embedded-editor, Postgres-for-metadata, S3-for-binaries is the correct shape and matches ONLYOFFICE's own documented integration model. ADR-001 through ADR-004 below are <b>confirmed</b>, and the MVP scoped down in §0.1 has been <b>built and code-reviewed against the running repository</b> as of September 7, 2026. The schema in §9 is already applied to your Supabase project. Two things changed between the plan and the code, both deliberate and both worth reading before you go further — see §0.2.</p>
+
+  <table>
+    <caption>Decision snapshot</caption>
+    <tr><th>Question</th><th>Decision</th><th>Confidence</th></tr>
+    <tr><td>Should the UI be built as Micro-Frontends (MFE)?</td><td><b>No — confirmed.</b> One React/TS SPA, modularized internally by domain with route-level lazy loading (see ADR-001).</td><td>Confirmed</td></tr>
+    <tr><td>If/when you do adopt MFE later, which framework?</td><td><b>Webpack/Rspack Module Federation</b>, shell + remotes, all-React. Not single-spa (see ADR-002).</td><td>Pre-registered, not active</td></tr>
+    <tr><td>Should the backend be microservices?</td><td><b>Yes — confirmed, two services for the POC</b>: a Java "Document Core" (auth/ACL/documents/versions/ONLYOFFICE callbacks) and ONLYOFFICE Document Server itself. AI/Parsing (Python) is deferred to Phase 2 — not built for the POC (see ADR-003, §0.1).</td><td>Confirmed</td></tr>
+    <tr><td>Which ONLYOFFICE edition?</td><td><b>Self-hosted Community Edition — confirmed for the POC.</b> Revisit Enterprise when scaling past a single instance (see ADR-004).</td><td>Confirmed</td></tr>
+  </table>
+
+  <h3 id="poc-scope">0.1 POC scope lock — confirmed September 6, 2026</h3>
+  <p>The following decisions are now settled and everything downstream in this document reflects them. Anything not listed here (multi-tenancy, real AI/RAG, event-driven infra) is explicitly out of scope until Phase 2.</p>
+  <table>
+    <tr><th>#</th><th>Decision</th></tr>
+    <tr><td>1</td><td>Frontend: single React/TS SPA (ADR-001) — no MFE for the POC.</td></tr>
+    <tr><td>2</td><td>Services: Document Core (Java/Spring Boot) + ONLYOFFICE Document Server + nginx. AI/Parsing exists as a named future seam only — no Python service is built in the POC.</td></tr>
+    <tr><td>3</td><td>No Kafka, no message broker, no outbox table, no event-driven anything. The POC has exactly one write path: Document Core → Supabase Postgres / S3, synchronously.</td></tr>
+    <tr><td>4</td><td>ONLYOFFICE Community Edition, self-hosted, single instance. Enterprise is a Phase-2-or-later conversation (ADR-004 unchanged).</td></tr>
+    <tr><td>5</td><td>PostgreSQL is your existing <b>Supabase</b> project (<code>nrhsoabqeskybrznxfyi</code>), not a new managed instance — see §9.</td></tr>
+    <tr><td>6</td><td>MVP surface: a UI to initiate a new document or upload an existing one, list "my documents," and open/edit it in-page via the embedded ONLYOFFICE editor. Sharing/ACL beyond an implicit owner, comments, approvals, etc. are not MVP.</td></tr>
+    <tr><td>7</td><td>AI/Parsing (extraction, embeddings, pgvector, RAG chat) is explicitly Phase 2 — not part of this build.</td></tr>
+    <tr><td>8</td><td>A dedicated Postgres schema (<code>officecollab</code>) was created inside your Supabase project rather than reusing <code>public</code>, which already holds an unrelated app (tenants/workflows/governance) — applied via Supabase MCP, see §9.</td></tr>
+    <tr><td>9</td><td>"Who's currently viewing/editing" presence lives in the <b>UI shell</b> (frontend), not as a Postgres table — see §9 for the recommended mechanism. <span class="tag watch">Not built</span> in this MVP pass — see §0.2.</td></tr>
+  </table>
+
+  <h3 id="asbuilt">0.2 As-built status (reviewed September 7, 2026)</h3>
+  <p>The code below was read directly from the running repository, not from the plan — this is what's actually there, including two deviations from the design above.</p>
+  <div class="callout risk"><span class="label">Deviation — no user authentication</span>The MVP does <b>not</b> wire up Supabase Auth. Every backend endpoint runs as a single hardcoded identity (<code>security.LocalUser</code>, a fixed UUID), and the frontend has no login screen and no Supabase client at all — this was a deliberate simplification made directly in the code (see the comment on <code>SecurityConfig</code>: "POC has no user auth ... every request acts as the single local user") to get to a working end-to-end demo faster, not an oversight I'm flagging after the fact. Practical effect: <code>document_permissions</code> ACL checks still run, but everyone using this deployment is the same "user," so they're not currently doing anything meaningful. <b>Before more than one real person uses this</b>, §9's original plan (Supabase Auth session token → JWKS verification in Spring Security → real <code>auth.users(id)</code> per request) needs to actually be wired back in; the schema and FK design already support it unchanged.</div>
+  <div class="callout info"><span class="label">Real bug found and fixed during the build</span>ONLYOFFICE Document Server attaches its own <code>Authorization: Bearer &lt;jwt&gt;</code> header to every outbound request it makes — including the request it makes to fetch the source document. That collided with S3's query-string SigV4 signing on the presigned URL originally planned for this (§7.1/§8.3), and S3 rejected the download with <code>400</code>. Fix actually shipped: ONLYOFFICE now fetches the document from a new backend endpoint, <code>GET /api/v1/onlyoffice/content?documentId=...</code>, which streams the bytes from S3 itself (<code>S3StorageService.download</code>) with no presigned URL involved — see §6, §7.1 and the new §8.7 for detail. This is a legitimate integration finding, not something to quietly revert.</div>
+  <table>
+    <caption>What exists that wasn't in the original plan</caption>
+    <tr><th>Change</th><th>Detail</th></tr>
+    <tr><td>Rename</td><td><code>PATCH /api/v1/documents/{id}</code> — rename a document in place (<code>DocumentService.rename</code>, <code>RenameDocumentRequest</code>). Not previously specified; small and consistent with the existing ACL model.</td></tr>
+    <tr><td>Content proxy</td><td><code>GET /api/v1/onlyoffice/content</code> — see the callout above. Also used by the frontend's own "Download" action in the editor toolbar.</td></tr>
+    <tr><td>Presence (§7.4)</td><td>Recommended (Supabase Realtime Presence) but <b>not implemented</b> — there's no presence code in the frontend at all yet. Fine for a single-fixed-user MVP; becomes relevant again once real multi-user auth is restored.</td></tr>
+    <tr><td>Dead code</td><td><code>S3StorageService.presignedGetUrl(...)</code> is still present but no longer called by anything — the content-proxy endpoint replaced its only caller. Harmless, but worth deleting next time you're in that file so it doesn't look like an active code path.</td></tr>
+  </table>
+
+  <h2 id="reqs"><span class="num">1.</span> Requirements recap</h2>
+  <p>A React + TypeScript SPA where a user can initiate a new document or upload an existing one (docx/xlsx/pptx/pdf), see it in a document list, and open it for <b>co-authoring</b> in-page via the embedded ONLYOFFICE editor (not a redirect). Java/Spring Boot ("Document Core") owns auth, document/version metadata, and ONLYOFFICE's save callback. Documents live in S3, never in Postgres. Postgres is your existing Supabase project. nginx fronts everything. AI/Parsing is a real, named part of the target architecture but is explicitly deferred past this POC.</p>
+
+  <h2 id="adr1"><span class="num">2.</span> ADR-001 — Monolithic SPA vs. Micro-Frontends</h2>
+  <div class="adr">
+    <div class="adr-head"><span>Do we build the React UI as Micro-Frontends?</span><span class="adr-status">Decision: NOT YET</span></div>
+    <div class="adr-body">
+      <h4>Context</h4>
+      <p>MFE (independently built and deployed frontend bundles composed at runtime) solves an <b>organizational</b> problem — multiple teams needing to ship on independent schedules without a shared release train — not a technical one. Your app has two logical surfaces (a document/workspace shell, and the ONLYOFFICE editor iframe) and, based on what you've described, one team building it. The editor itself is already isolated: ONLYOFFICE's React integration mounts the editor as its own component/iframe with its own JS runtime, so you get most of MFE's isolation benefit (independent failure domain, independent update cadence for the editor vs. your shell) for free, without adopting MFE machinery for the rest of the app.</p>
+      <h4>Options considered</h4>
+      <table>
+        <tr><th>Option</th><th>Pros</th><th>Cons</th></tr>
+        <tr><td><b>A. Single SPA</b> (recommended) — one Vite/CRA-equivalent React+TS build, internally modularized by domain (<code>/documents</code>, <code>/workspace</code>, <code>/ai-search</code>, <code>/admin</code>) with route-based <code>React.lazy</code> code-splitting</td><td>Simplest CI/CD (one pipeline); one dependency tree, one design system instance, no version-skew between "micro" apps; smallest bundle-orchestration risk; fastest to build</td><td>All feature teams share one deploy train and one React/router/build-tool version until you outgrow it</td></tr>
+        <tr><td>B. Micro-frontends now (Module Federation)</td><td>Independent deploys per domain; teams can pick different release cadences</td><td>Real, non-trivial cost: shared-dependency version negotiation, shared design-system contract, cross-remote error boundaries, harder E2E testing, slower initial build — paid up front for a problem (multi-team independence) you don't have yet</td></tr>
+        <tr><td>C. iframe-per-tool composition</td><td>Maximum isolation</td><td>Loses SPA-level state sharing, deep-linking, and shared auth context; you'd be fighting the framework to get the "feels like one app" experience item 12 of your own brief asks for</td></tr>
+      </table>
+      <div class="callout decision"><span class="label">Decision</span>Build Option A. Structure the codebase as if it might federate later — domain-based folders under <code>src/domains/&lt;name&gt;</code>, no cross-domain imports except through a shared <code>@app/ui-kit</code> and <code>@app/api-client</code> package, each domain lazy-loaded at the router level. This is the standard "modular monolith" precursor to MFE: if a domain later needs to become an independently-deployed remote, the extraction is a build-config change, not a rewrite, because the domain already has no illegal imports into siblings.</div>
+      <h4>Revisit when</h4>
+      <p>You have ≥2 teams that need to ship independently, or a specific domain (e.g. the AI/search surface) needs a materially different release cadence or even a different framework. At that point, go to ADR-002.</p>
+    </div>
+  </div>
+
+  <h2 id="adr2"><span class="num">3.</span> ADR-002 — If/when you adopt MFE: which framework?</h2>
+  <div class="adr">
+    <div class="adr-head"><span>Module Federation vs. single-spa</span><span class="adr-status">Decision: Module Federation (pre-registered, not active)</span></div>
+    <div class="adr-body">
+      <h4>Options considered</h4>
+      <table>
+        <tr><th></th><th>Module Federation</th><th>single-spa</th></tr>
+        <tr><td>Governance</td><td>Part of webpack core since webpack 5 (also implemented by Rspack, Vite via plugins) — maintained by the webpack org itself</td><td>Independent open-source project (<a href="https://github.com/single-spa/single-spa">single-spa/single-spa</a>), framework-agnostic router with its own root-config concept</td></tr>
+        <tr><td>Best fit</td><td>Same-framework composition (all React, your case) — remotes share a runtime, lazily fetch each other's bundles, negotiate shared deps (React/ReactDOM) as singletons</td><td>Mixed-framework composition (React shell + Angular remote + Vue remote) — you don't have this requirement</td></tr>
+        <tr><td>Mental model</td><td>Bundler-level: "this build exposes these modules, this build consumes those modules"</td><td>Router-level: a root-config registers "applications" that mount/unmount on route match, deliberately bundler-agnostic</td></tr>
+        <tr><td>Cost for an all-React org</td><td>Lower — no root-config layer, no import-map-overrides tooling, fits directly into your existing webpack/Vite build</td><td>Higher — you'd be adopting an extra routing/lifecycle abstraction to solve a multi-framework problem you don't have</td></tr>
+      </table>
+      <div class="callout decision"><span class="label">Decision</span>If you ever split, use <b>Module Federation</b> (webpack 5 native, or Rspack's compatible implementation for faster builds) with a thin shell app and one remote per domain. Do not adopt single-spa — its value proposition (framework interop) doesn't apply to an all-React estate, and it adds a routing abstraction Module Federation doesn't need.</div>
+    </div>
+  </div>
+
+  <h2 id="adr3"><span class="num">4.</span> ADR-003 — Backend service boundaries</h2>
+  <div class="adr">
+    <div class="adr-head"><span>How many microservices, and where are the seams?</span><span class="adr-status">Confirmed for POC: Document Core + ONLYOFFICE + nginx only</span></div>
+    <div class="adr-body">
+      <p>Your instinct to keep Java and Python as separate services, and to <b>not</b> put the office-editing engine in Python, is correct and matches ONLYOFFICE's own documented separation of concerns. For the POC you've confirmed the AI/Parsing service is <b>deferred entirely</b> — it's named below as the target seam so the Java side is built without a hole where it will eventually plug in, but no Python code is written for this phase.</p>
+      <table>
+        <tr><th>Service</th><th>Owns (POC)</th><th>Does NOT own</th></tr>
+        <tr><td><b>Document Core</b> (Java / Spring Boot) — <span class="tag new">built now</span></td><td>AuthN, <code>document_permissions</code> ACL checks, document &amp; version metadata, S3 presigned-URL issuance, upload/initiate-document flow, ONLYOFFICE editor-config generation + JWT signing, the ONLYOFFICE save <i>callback</i> endpoint</td><td>Document parsing/text-extraction, embeddings, semantic search, the office rendering engine itself</td></tr>
+        <tr><td><b>AI / Parsing Service</b> (Python) — <span class="tag watch">Phase 2, not built</span></td><td>(future) Text/table extraction, chunking, embedding generation, pgvector writes, semantic-search &amp; RAG-chat endpoints</td><td>Auth, ACL, document CRUD, S3 lifecycle — when built, it receives a document reference + permission context from Document Core</td></tr>
+        <tr><td><b>ONLYOFFICE Document Server</b> (official image) — <span class="tag new">built now</span></td><td>The actual co-authoring engine — OT/CRDT-style conflict resolution, rendering, format conversion</td><td>Everything above — see ADR-004 for edition/licensing implications</td></tr>
+        <tr><td><b>nginx</b> — <span class="tag new">built now</span></td><td>TLS termination, routing, WebSocket upgrade for the ONLYOFFICE co-authoring socket, request-size limits for uploads</td><td>Business logic, auth decisions</td></tr>
+      </table>
+      <div class="callout decision"><span class="label">Confirmed</span>No Kafka, no message broker, no outbox table for the POC — you don't need to decouple a save from an embedding job that doesn't exist yet. Document Core's save-callback handler does exactly two things synchronously: persist the new version to S3, update Postgres. When AI/Parsing is built in Phase 2, revisit whether it needs an outbox/queue in front of it (§7.2 note) — don't build that plumbing speculatively now.</div>
+    </div>
+  </div>
+
+  <h2 id="adr4"><span class="num">5.</span> ADR-004 — ONLYOFFICE edition, licensing &amp; scaling</h2>
+  <div class="adr">
+    <div class="adr-head"><span>Which ONLYOFFICE edition, and what does that commit you to?</span><span class="adr-status">Confirmed: Community, self-hosted, POC only</span></div>
+    <div class="adr-body">
+      <p>This is the item in your brief most likely to surprise you later, so it gets its own ADR rather than being buried in the review section.</p>
+      <table>
+        <tr><th></th><th>Community Edition (self-hosted)</th><th>Enterprise / Docs Cloud</th></tr>
+        <tr><td>License</td><td>AGPLv3 (as of Docs 9.4, May 2026 — attribution/notice requirements tightened; trademark rights still not granted)</td><td>Commercial license, paid support</td></tr>
+        <tr><td>Concurrent co-authoring connections</td><td><b>No longer capped</b> — the historic 20-simultaneous-connection limit was removed in Docs 9.4 (May 2026)</td><td>No cap, was never capped</td></tr>
+        <tr><td>Horizontal scaling / clustering (multiple Document Server instances behind a load balancer, for HA or throughput)</td><td><b>Not supported</b> — official cluster deployment (docservice + converter pods + shared Redis/RabbitMQ, Kubernetes/OpenShift) is Enterprise/Developer-only and requires a separate paid license</td><td>Supported — official sizing guide: ~4 vCPU/8GB RAM and 2–3 docservice+converter replicas per ~1,000 concurrent connections</td></tr>
+        <tr><td>Support SLA</td><td>Community forum only</td><td>Vendor SLA</td></tr>
+      </table>
+      <div class="callout risk"><span class="label">Risk if unaddressed</span>Because AGPLv3 permits self-hosting and the connection cap is gone, it's easy to build your entire POC and even a real launch on Community Edition and only discover the clustering restriction when a single Document Server instance becomes your throughput ceiling — at which point scaling out requires a license purchase and, per ONLYOFFICE's own architecture, standing up Redis/RabbitMQ/Nginx-Ingress you hadn't planned for. For a bank-internal platform (CSIS/Legal-adjacent, likely audited), also route the AGPLv3 self-hosting terms through your legal/OSS-compliance process before this goes past POC — AGPL's copyleft and attribution obligations are a routine compliance-review item at a regulated institution, not a blocker, but it should be a deliberate sign-off, not a default.</div>
+      <div class="callout decision"><span class="label">Decision</span>Build and pilot on self-hosted Community Edition — it is functionally complete for the integration pattern in this document and no longer connection-capped. Before production go-live, get a capacity estimate (concurrent editors × avg session length) from your rollout plan and price Enterprise if you'll ever need &gt;1 Document Server instance for HA or load; if you'll always run a single well-provisioned instance behind nginx with no HA requirement, Community may remain viable long-term, but confirm that's an acceptable availability posture for a bank-internal collaboration tool before committing to it.</div>
+    </div>
+  </div>
+
+  <h2 id="arch"><span class="num">6.</span> End-to-end architecture — as built</h2>
+  <p>Same shape as your blueprint, scoped to what's confirmed for the POC and updated to match the actual running code (§0.2). No outbox, no Python service, no message broker — those return in Phase 2. Auth is a single fixed local identity for this MVP, not per-user (§0.2) — there is deliberately no auth box on this diagram.</p>
+  <div class="box-diagram">
+    <div class="row">
+      <div class="box edge"><span class="t">React + TS SPA</span><span class="s">document list · upload/initiate/rename · ONLYOFFICE editor mounted in-page (<code>@onlyoffice/document-editor-react</code>)</span></div>
+    </div>
+    <div class="arrow">▼ HTTPS</div>
+    <div class="row">
+      <div class="box edge"><span class="t">nginx gateway</span><span class="s">TLS · routing · WS upgrade · upload size limits</span></div>
+    </div>
+    <div class="arrow">▼</div>
+    <div class="row">
+      <div class="box svc"><span class="t">Document Core (Spring Boot)</span><span class="s">fixed <code>LocalUser</code> · ACL · metadata · editor-config + JWT · content proxy <span class="tag new">§8.7</span> · callback handler, JWT-checked</span></div>
+    </div>
+    <div class="row">
+      <div class="box data"><span class="t">Supabase PostgreSQL</span><span class="s"><code>officecollab</code> schema — metadata, ACL, versions</span></div>
+      <div class="box data"><span class="t">S3</span><span class="s">docx/xlsx/pptx binaries, versioned · fetched only via Document Core, never a direct URL to the browser or ONLYOFFICE <span class="tag new">§8.7</span></span></div>
+    </div>
+    <div class="arrow">▲ co-authoring WS + REST, JWT-signed both ways</div>
+    <div class="row">
+      <div class="box svc"><span class="t">ONLYOFFICE Document Server</span><span class="s">Community, official image · not internet-reachable directly, only via gateway</span></div>
+    </div>
+  </div>
+  <div class="callout info"><span class="label">Deferred to Phase 2</span>AI/Parsing service (Python), pgvector/embeddings, any outbox/queue, Kafka. Nothing above precludes adding them later — Document Core's save-callback handler is the seam where a Phase-2 event would be emitted.</div>
+
+  <h2 id="flows"><span class="num">7.</span> Corrected sequence flows</h2>
+  <h3>7.1 Opening a document for (co-)editing — as built</h3>
+  <ol class="steps">
+    <li>React calls <code>GET /api/v1/documents/{id}/editor-config</code>. In the current MVP there is no session token to send — the call runs as the fixed <code>LocalUser</code> (§0.2); when real auth is restored this is where the Supabase session token goes back in.</li>
+    <li>Document Core checks <code>document_permissions</code> for that <code>(document, user)</code> pair (the ACL check runs for real; it's just always the same user for now).</li>
+    <li>Document Core sets <code>document.url</code> in the config to <b>its own</b> <code>GET /api/v1/onlyoffice/content?documentId=...</code>, not a presigned S3 URL — see §8.7 for why the presigned-URL approach originally planned here doesn't work with ONLYOFFICE.</li>
+    <li>Document Core builds the ONLYOFFICE config object with a <b>stable, content-derived <code>key</code></b> (<code>documentId + "_" + versionId</code>, generated once per version — the fix for §8.1's bug) and signs it with the Document Server's shared secret.</li>
+    <li>React mounts <code>&lt;DocumentEditor&gt;</code> (the official <code>@onlyoffice/document-editor-react</code> package) with that config; ONLYOFFICE Document Server calls back into Document Core's content endpoint to fetch the file and opens/joins the co-authoring session for that <code>key</code>.</li>
+  </ol>
+  <h3>7.2 Saving (the callback)</h3>
+  <ol class="steps">
+    <li>ONLYOFFICE's internal co-authoring service handles keystroke-level sync between connected clients — this never touches your backend.</li>
+    <li>On "everyone closed the doc" or forced save, Document Server POSTs to your <code>callbackUrl</code> with <code>status</code> and a one-time <code>url</code> to fetch the resulting file, <b>signed with a JWT in the Authorization header</b>.</li>
+    <li><b>Document Core must validate that JWT</b> (shared secret, same one configured on the Document Server) before trusting the payload — your pasted <code>CallbackController</code> does not do this; see §8.2.</li>
+    <li>Document Core downloads the file from the Document-Server-provided URL over the internal network, uploads it to S3 as a new version, updates <code>document_versions</code>/<code>documents.current_version_id</code> — synchronously, in the callback response. No queue, no outbox, for the POC (confirmed §0.1).</li>
+  </ol>
+  <h3>7.3 RAG ingestion <span class="tag watch">Phase 2 — not built</span></h3>
+  <p>Deferred. When AI/Parsing is built, this is the seam: Document Core's save-callback (step 5 above) is where a Phase-2 event to the Python service would be emitted — decide then whether that's a direct call, a Postgres outbox, or your org's existing broker (ADR-003 watch item).</p>
+  <h3>7.4 Presence — "who's viewing/editing this document" <span class="tag watch">Not built</span></h3>
+  <p>Confirmed to live in the UI shell (§0.1 item 9), not as a Postgres table — but as of this review, no presence code exists in the frontend at all (§0.2). Recommended approach, unchanged from the original plan: a <b>Supabase Realtime Presence</b> channel keyed by document id — each open editor tab tracks itself on <code>presence:document:&lt;id&gt;</code> with its user id, and every client subscribed to that channel gets the live roster for free, with no backend code and no table to clean up on disconnect (Realtime handles leave-detection). This depends on real per-user identity existing first (§0.2's auth deviation) — with everyone currently the same <code>LocalUser</code>, a presence roster wouldn't show anything meaningful yet anyway, which is likely why it was skipped for this pass.</p>
+
+  <h2 id="review"><span class="num">8.</span> Line-by-line review of your pasted blueprint</h2>
+  <p>Your architecture diagrams and table designs are kept as-is below except where noted — most of the blueprint is right. These are the specific defects worth fixing before you build from it.</p>
+
+  <h3>8.1 <span class="tag fix">Fix</span> The ONLYOFFICE document <code>key</code> is generated wrong</h3>
+  <p>Your <code>DocumentService.java</code> does:</p>
+  <pre><code>documentObj.put("key", docId + "_" + System.currentTimeMillis());</code></pre>
+  <p>ONLYOFFICE uses <code>key</code> to identify a co-authoring <i>session</i> for a specific document <i>version</i> — the Document Server caches state per key and expects the same key to be reused by every user opening the same version, so they land in the same session. Minting a new key from <code>currentTimeMillis()</code> on every editor-config request means two users opening "the same document" thirty seconds apart get two different keys, i.e. two separate, non-collaborating sessions — this silently breaks the co-editing requirement that is the whole point of the project. Fix: derive <code>key</code> deterministically from something that only changes when the underlying file changes, e.g. <code>docId + "_" + currentVersionId</code> or a content checksum, generated once when a new version is stored, not on every config request.</p>
+
+  <h3>8.2 <span class="tag fix">Fix — security</span> The callback controller doesn't validate the incoming JWT</h3>
+  <p>Your <code>CallbackController.handleOnlyOfficeCallback</code> reads <code>status</code> and <code>url</code> straight off the request body with no signature check. ONLYOFFICE signs this callback with the shared secret precisely so your endpoint can tell "this really came from our Document Server" apart from "anyone who can reach this URL." As written, any caller who can reach <code>/api/v1/documents/callback</code> can pass <code>status: 2</code> and a URL of their choosing and your service will fetch and persist whatever that URL returns as the new authoritative document version. Fix: validate the <code>Authorization</code> (or body-embedded, per your config) JWT against the same secret configured via <code>JWT_SECRET</code>/<code>local.json</code> on the Document Server side, and reject unsigned/invalid requests before touching S3.</p>
+
+  <h3>8.3 <span class="tag fix">Fix</span> Don't hand ONLYOFFICE a permanent public S3 URL</h3>
+  <p>Your sample <code>document.url</code> is a bare <code>s3DownloadUrl</code>. If that's a long-lived public or long-TTL signed URL, anyone who obtains it (logs, browser history, a shared link) can fetch the file outside your ACL checks. Generate a short-TTL presigned URL at editor-config time, scoped to that one request.</p>
+
+  <h3>8.4 <span class="tag watch">Watch</span> pgvector: index choice and model lock-in</h3>
+  <p>Two small but consequential gaps in the schema you pasted:</p>
+  <table>
+    <tr><th>Gap</th><th>Why it matters</th><th>Fix</th></tr>
+    <tr><td><code>USING ivfflat ... WITH (lists = 100)</code></td><td>pgvector's own documentation now generally favors <b>HNSW</b> for the recall/latency tradeoff at this scale (better query performance, no need to retrain lists as the table grows); ivfflat also requires the table to already have representative data before building the index, which is awkward for an incrementally-growing document store</td><td>Use <code>USING hnsw (embedding vector_cosine_ops)</code> with default <code>m</code>/<code>ef_construction</code>, tune later if needed</td></tr>
+    <tr><td>No <code>embedding_model</code> column on <code>document_embeddings</code></td><td>You will change embedding models eventually (better model, cost, or a vendor change) — <code>vector(384)</code> hard-codes <code>all-MiniLM-L6-v2</code>'s dimensionality; mixing vectors from two models in one column silently corrupts similarity search</td><td>Add <code>embedding_model varchar(64)</code> and <code>embedding_dim int</code>, and treat a model change as a full re-embed + column migration, never an in-place mix</td></tr>
+  </table>
+
+  <h3>8.5 <span class="tag keep">Confirmed</span> Single-tenant for the POC</h3>
+  <p>Your narrative mentioned <code>tenant_id</code> in one schema sketch but the final DDL you pasted omitted it. Confirmed (§0.1): single-tenant for the POC, so it's omitted from the applied schema in §9 too. If multi-tenancy becomes a real requirement later, add <code>tenant_id</code> to all three <code>officecollab</code> tables before the POC has meaningful data in it — retrofitting after the fact is materially more work than adding the column up front.</p>
+
+  <h3>8.6 <span class="tag keep">Keep as-is</span></h3>
+  <p>Application-owns-the-lifecycle model; S3-not-Postgres for binaries; ONLYOFFICE-as-embedded-component rather than "open ONLYOFFICE's own site"; Python kept out of the editing engine; nginx as the single ingress; the <code>documents</code>/<code>document_versions</code>/<code>document_permissions</code> schema shape.</p>
+
+  <h3>8.7 <span class="tag new">New finding</span> Presigned S3 URLs don't work as ONLYOFFICE's <code>document.url</code> — found and fixed during the build</h3>
+  <p>§8.3 above recommended a short-TTL presigned S3 GET URL for <code>document.url</code> in the editor config, instead of a permanent public URL — correct in isolation, but it turns out to still be the wrong mechanism for this specific caller. ONLYOFFICE Document Server attaches its own <code>Authorization: Bearer &lt;jwt&gt;</code> header to every outbound HTTP request it makes, including the one it makes to go fetch <code>document.url</code>. A presigned S3 URL authenticates via <b>query-string</b> parameters (SigV4) — when ONLYOFFICE's extra <code>Authorization</code> header rides along on top of that, S3 sees a request with two conflicting auth mechanisms and rejects it with <code>400 Bad Request</code>, before the document ever loads.</p>
+  <p>The fix actually shipped: <code>document.url</code> now points at a new endpoint on Document Core itself, <code>GET /api/v1/onlyoffice/content?documentId=...</code> (<code>OnlyOfficeCallbackController#content</code>), which downloads the object from S3 server-side (<code>S3StorageService.download</code>, plain <code>GetObject</code>, no presigning) and streams the bytes back. ONLYOFFICE's extra header is simply ignored by that endpoint — Document Core doesn't require it for authentication (§0.2 — there's no per-user auth at all yet), so there's no conflict to have. <code>S3StorageService.presignedGetUrl(...)</code> is still in the codebase but nothing calls it anymore; safe to delete next time you're in that file.</p>
+  <div class="callout warn"><span class="label">Watch — once real auth comes back</span>When §0.2's auth deviation is fixed and this endpoint needs to check that the caller actually has access to the document (right now it does — it calls <code>documentService.loadForEditorConfig</code>, the same ACL check as everywhere else, keyed on the fixed <code>LocalUser</code>), keep in mind ONLYOFFICE is the caller here, not the end user's browser — it cannot forward a Supabase session token it never had. Continue verifying this specific endpoint via the ONLYOFFICE-side shared secret (as the callback endpoint already does, §8.2's fix), not via a per-user token, or document loads will break.</div>
+
+  <h2 id="data"><span class="num">9.</span> Data model — applied to Supabase</h2>
+  <div class="callout decision"><span class="label">Already live</span>The schema below has been applied to your Supabase project <code>arunvaidhyanathan's Project</code> (ref <code>nrhsoabqeskybrznxfyi</code>, <code>us-east-1</code>) via the Supabase MCP as migration <code>officecollab_poc_schema</code>. It lives in its own <code>officecollab</code> schema, isolated from the <code>public</code> schema your project already uses for an unrelated app (<code>tenants</code>, <code>workflows</code>, <code>workflow_versions</code>, <code>approval_requests</code>, <code>audit_logs</code>, etc.) — nothing existing was touched.</div>
+  <p>Deliberately excluded from this POC pass: <code>document_embeddings</code>/pgvector (Phase 2 — <code>vector</code> extension 0.8.0 is available on the project but not installed), any outbox/queue table (§0.1 item 3), and an <code>editing_sessions</code> table (§7.4 — presence lives client-side via Supabase Realtime Presence instead). <code>tenant_id</code> is also omitted for the POC (single-tenant, per §0.1) — add it to all three tables first if you multi-tenant later, since retrofitting is materially more work than adding it up front.</p>
+  <pre><code>create schema if not exists officecollab;
+
+create table officecollab.documents (
+    id                  uuid primary key default gen_random_uuid(),
+    name                varchar(255) not null,
+    mime_type           varchar(100) not null,
+    storage_key         varchar(512) not null,       -- S3 object key for the CURRENT version
+    current_version_id  uuid references officecollab.document_versions(id),
+    created_by          uuid not null references auth.users(id),
+    created_at          timestamptz not null default now(),
+    updated_at          timestamptz not null default now()
+);
+
+create table officecollab.document_versions (
+    id              uuid primary key default gen_random_uuid(),
+    document_id     uuid not null references officecollab.documents(id) on delete cascade,
+    version_number  int not null,
+    storage_key     varchar(512) not null,
+    onlyoffice_key  varchar(128) not null unique,     -- deterministic co-authoring key, see §8.1
+    created_by      uuid not null references auth.users(id),
+    created_at      timestamptz not null default now(),
+    size            bigint,
+    checksum        varchar(128),
+    unique (document_id, version_number)
+);
+
+create table officecollab.document_permissions (
+    document_id  uuid not null references officecollab.documents(id) on delete cascade,
+    user_id      uuid not null references auth.users(id),
+    permission   varchar(20) not null check (permission in ('owner','edit','comment','view')),
+    granted_at   timestamptz not null default now(),
+    primary key (document_id, user_id)
+);
+
+-- RLS enabled with zero policies: these tables are only ever touched by Document Core
+-- over a direct Postgres connection (bypasses RLS by role), never by the browser via
+-- PostgREST/anon key. Enabling RLS with no policies means anon/authenticated are denied
+-- by default if that ever changes accidentally.
+alter table officecollab.documents enable row level security;
+alter table officecollab.document_versions enable row level security;
+alter table officecollab.document_permissions enable row level security;
+</code></pre>
+  <p><code>created_by</code>/<code>user_id</code> reference <code>auth.users(id)</code> directly rather than a local users table — Supabase's own <code>auth.users</code> is the user store, and this FK is unchanged. <b>As built (§0.2), nothing currently populates it with a real Supabase Auth user</b> — every row is written with <code>LocalUser.ID</code> (a fixed, hardcoded UUID), because the MVP has no login flow. The schema is ready for real per-user data the moment auth is wired up; today it just isn't being used that way.</p>
+
+  <h3>9.1 How Document Core connects &amp; authenticates</h3>
+  <table>
+    <tr><th>Concern</th><th>As built</th><th>Original recommendation / why</th></tr>
+    <tr><td>Postgres connection from Spring Boot</td><td>Direct connection, as recommended</td><td><b>Direct connection</b> (<code>db.nrhsoabqeskybrznxfyi.supabase.co:5432</code>) if your network has IPv6; otherwise <b>Supavisor session mode</b> (<code>...pooler.supabase.com:5432</code>). Do <b>not</b> use transaction-mode pooling (port 6543) for a long-lived JDBC pool — it doesn't support prepared statements, which JDBC relies on.</td></tr>
+    <tr><td>Validating the user's JWT on incoming API calls</td><td><span class="tag fix">Not implemented</span> — there's no JWT to validate; <code>SecurityConfig</code> only configures CORS now, and every request is treated as <code>LocalUser</code> (§0.2). Spring Security's OAuth2-resource-server dependency was removed from the build entirely, not just unconfigured.</td><td>Fetch Supabase's JWKS at <code>https://nrhsoabqeskybrznxfyi.supabase.co/auth/v1/.well-known/jwks.json</code> and verify with a standard JWT library (Spring Security's OAuth2 Resource Server supports a JWK Set URI directly) — no shared secret to manage. Still the right approach to restore before real multi-user use.</td></tr>
+  </table>
+
+  <h3>9.2 Deferred (Phase 2) — kept here for reference only, not applied</h3>
+  <pre><code>-- Not created yet. Apply when AI/Parsing is actually built.
+create extension if not exists vector;   -- already available on this project (v0.8.0), just not installed
+
+create table officecollab.document_embeddings (
+    id                   bigserial primary key,
+    document_id          uuid references officecollab.documents(id) on delete cascade,
+    document_version_id  uuid not null,
+    content              text not null,
+    embedding_model      varchar(64) not null,   -- prevents model-mix corruption, see §8.4
+    embedding_dim        int not null,
+    embedding            vector(384)
+);
+
+create index on officecollab.document_embeddings using hnsw (embedding vector_cosine_ops); -- not ivfflat, see §8.4
+</code></pre>
+
+  <h2 id="deploy"><span class="num">10.</span> Deployment topology &amp; capacity planning</h2>
+  <table>
+    <tr><th>Component</th><th>Deployment unit</th><th>Notes</th></tr>
+    <tr><td>React SPA</td><td>Static build behind nginx / CDN</td><td>No server-side rendering needed for this use case</td></tr>
+    <tr><td>Document Core</td><td>Spring Boot container, single instance is fine for the POC (stateless — no in-memory session state)</td><td>Scale on request volume later, not on document-editing concurrency — that load lives in ONLYOFFICE</td></tr>
+    <tr><td>AI/Parsing Service</td><td><span class="tag watch">Not deployed — Phase 2</span></td><td>N/A for the POC</td></tr>
+    <tr><td>ONLYOFFICE Document Server</td><td><b>Single instance</b> on Community Edition (see ADR-004) — confirmed sufficient for POC scale</td><td>Official sizing for when this grows: ~4 vCPU/8GB RAM and 2–3 docservice+converter replicas per ~1,000 concurrent connections, ≥100GB persistent storage</td></tr>
+    <tr><td>PostgreSQL</td><td><b>Supabase-managed</b> (project <code>nrhsoabqeskybrznxfyi</code>) — no new instance to stand up</td><td><code>vector</code> extension available but not installed until Phase 2 (§9.2)</td></tr>
+    <tr><td>nginx gateway</td><td>Needs <code>proxy_http_version 1.1</code> + <code>Upgrade</code>/<code>Connection</code> headers for the ONLYOFFICE WS path (you already have this), plus a raised <code>client_max_body_size</code> for large office files and a longer <code>proxy_read_timeout</code> for long-lived co-authoring connections</td><td></td></tr>
+  </table>
+
+  <h2 id="open"><span class="num">11.</span> Open decisions needing your input</h2>
+  <p>§0.1 and §0.2 answered most of what this section used to list (tenancy, Kafka, ONLYOFFICE edition, S3 bucket, "initiate new document" — that's built as create-from-template, see §0.2's endpoint table). What's actually left, now that the MVP is built and reviewed:</p>
+  <table>
+    <tr><th>Decision</th><th>Why it's yours to make</th></tr>
+    <tr><td>When to restore real Supabase Auth (§0.2)</td><td>The schema and JWT-verification approach in §9/§9.1 don't need to change — only <code>SecurityConfig</code>, <code>LocalUser</code>'s call sites, and the frontend login flow do. Worth doing before anyone but you uses this deployment; not urgent for solo local testing.</td></tr>
+    <tr><td>Whether to build presence now that it's the only §0.1 item still unbuilt (§7.4)</td><td>Low value until real per-user auth exists (everyone would show up as the same person) — likely sequenced right after the auth item above, not before it.</td></tr>
+    <tr><td>Phase 2 timing for AI/Parsing</td><td>Affects whether it's worth reserving the <code>document_version_id</code>/model-versioning shape now (already done in §9.2) vs. designing it fresh later</td></tr>
+    <tr><td>Delete the dead <code>presignedGetUrl</code> code (§8.7) and the now-stale PDF export of this document</td><td>Housekeeping, not architecture — low priority, mentioned here so it doesn't get forgotten</td></tr>
+  </table>
+
+  <h2 id="refs"><span class="num">12.</span> References (official sources)</h2>
+  <ul class="refs">
+    <li><a href="https://api.onlyoffice.com/docs/docs-api/get-started/frontend-frameworks/react/">ONLYOFFICE — Official React integration guide (api.onlyoffice.com)</a></li>
+    <li><a href="https://github.com/ONLYOFFICE/document-editor-react">ONLYOFFICE/document-editor-react — official npm package source</a></li>
+    <li><a href="https://github.com/ONLYOFFICE/Docker-DocumentServer">ONLYOFFICE/Docker-DocumentServer — official Docker distribution</a></li>
+    <li><a href="https://helpcenter.onlyoffice.com/docs/installation/docs-configure-jwt.aspx">ONLYOFFICE — Configuring JWT for ONLYOFFICE Docs (official help center)</a></li>
+    <li><a href="https://api.onlyoffice.com/editors/security">ONLYOFFICE — Editor security documentation</a></li>
+    <li><a href="https://linuxiac.com/onlyoffice-docs-9-4-removes-community-connection-limit/">ONLYOFFICE Docs 9.4 removes the Community-edition 20-connection limit (May 2026)</a></li>
+    <li><a href="https://www.onlyoffice.com/blog/2025/12/onlyoffice-cluster-deployment">ONLYOFFICE — official cluster-deployment blog post (Enterprise/Developer-only, sizing figures)</a></li>
+    <li><a href="https://webpack.js.org/concepts/module-federation/">webpack.js.org — Module Federation, official webpack documentation</a></li>
+    <li><a href="https://github.com/single-spa/single-spa">single-spa/single-spa — official GitHub repository</a></li>
+    <li><a href="https://single-spa.js.org/docs/getting-started-overview/">single-spa.js.org — Getting Started (official docs)</a></li>
+    <li><a href="https://github.com/pgvector/pgvector">pgvector/pgvector — official GitHub repository and README (HNSW vs. IVFFlat guidance)</a></li>
+    <li><a href="https://supabase.com/docs/guides/database/connecting-to-postgres">Supabase — Connect to your database (official docs: direct connection vs. Supavisor pooler)</a></li>
+    <li><a href="https://supabase.com/docs/guides/auth/signing-keys">Supabase — JWT Signing Keys (official docs: JWKS endpoint, asymmetric vs. legacy shared-secret verification)</a></li>
+    <li><a href="https://supabase.com/docs/guides/realtime/presence">Supabase — Realtime Presence (official docs)</a></li>
+  </ul>
+
+  <footer>Office Collaboration Platform ADR · MVP built and reviewed · prepared September 6, 2026, updated against the as-built code September 7, 2026 · figures marked "official" above were verified against vendor documentation/source repositories at time of writing; ONLYOFFICE licensing terms change between releases — re-verify before budget/legal sign-off. The companion PDF export of this document was not regenerated in this update and is now stale relative to §0.2 onward — regenerate it before sharing outside this repo, or treat this HTML as the current source of truth.</footer>
+
+</div>
+</body>
+</html>

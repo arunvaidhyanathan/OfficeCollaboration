@@ -1,0 +1,51 @@
+server:
+  port: ${SERVER_PORT:8080}
+
+spring:
+  application:
+    name: document-core
+
+  datasource:
+    # Direct connection to the Supabase Postgres instance (project ref nrhsoabqeskybrznxfyi, us-east-1, PG15).
+    # Default points at the direct host. If your network/host doesn't have IPv6 connectivity, Supabase's direct
+    # host may be unreachable -- switch to the session-mode pooler instead, e.g.:
+    #   jdbc:postgresql://aws-0-us-east-1.pooler.supabase.com:5432/postgres
+    # (with username in the form postgres.nrhsoabqeskybrznxfyi for the pooler). Both are IPv4/IPv6 compatible
+    # session-mode endpoints suitable for a long-lived JDBC connection pool (do NOT use the transaction-mode
+    # pooler port 6543 here -- it doesn't support prepared statements the way Hibernate needs).
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://db.nrhsoabqeskybrznxfyi.supabase.co:5432/postgres}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    # No default on purpose -- fill in from Supabase dashboard: Settings > Database > Connection string / password.
+    password: ${SPRING_DATASOURCE_PASSWORD:}
+    hikari:
+      maximum-pool-size: 10
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      # Schema is already applied and managed outside this app (see project README/SQL migration files) --
+      # never let Hibernate create/alter it. "validate" would also be acceptable; "none" is used here so the
+      # app doesn't even need SELECT on information_schema at startup.
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: officecollab
+        jdbc:
+          time_zone: UTC
+
+app:
+  cors:
+    # Origin allowed to call this API from the browser (the Vite dev server by default).
+    origin: ${APP_CORS_ORIGIN:http://localhost:5173}
+  public-base-url: ${APP_PUBLIC_BASE_URL:http://localhost:8080}
+
+onlyoffice:
+  jwt:
+    # Shared secret configured on the ONLYOFFICE Document Server side (JWT_SECRET env var there). Used both to
+    # sign the editor config we hand to the browser/ONLYOFFICE, and to verify the callback ONLYOFFICE sends us.
+    secret: ${ONLYOFFICE_JWT_SECRET:}
+
+aws:
+  s3:
+    bucket: ${AWS_S3_BUCKET:}
+  region: ${AWS_REGION:us-east-1}

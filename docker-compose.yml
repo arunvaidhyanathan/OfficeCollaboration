@@ -1,0 +1,82 @@
+services:
+  db:
+    # Local stand-in for Supabase Postgres -- see db/local_schema.sql for how it differs from the
+    # Supabase-hosted schema (dropped auth.users FKs, no service_role). Auth/JWT verification still
+    # goes through Supabase; only data storage is local.
+    image: postgres:15-alpine
+    container_name: officecollab-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: ${SPRING_DATASOURCE_USERNAME:-postgres}
+      POSTGRES_PASSWORD: ${SPRING_DATASOURCE_PASSWORD:?set SPRING_DATASOURCE_PASSWORD in .env}
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./db/local_schema.sql:/docker-entrypoint-initdb.d/01_schema.sql:ro
+    ports:
+      - "5432:5432"
+
+  onlyoffice:
+    # Official image. Community Edition, self-hosted, single instance -- ADR-004 (confirmed for the POC).
+    # Pin a specific tag once you've validated this locally (e.g. onlyoffice/documentserver:9.0.0) rather
+    # than riding "latest" -- see docs/architecture/... for why Community can't horizontally scale past one
+    # instance, which "latest" won't warn you about.
+    image: onlyoffice/documentserver:latest
+    container_name: officecollab-onlyoffice
+    restart: unless-stopped
+    environment:
+      JWT_ENABLED: "true"
+      JWT_SECRET: ${ONLYOFFICE_JWT_SECRET:?set ONLYOFFICE_JWT_SECRET in .env}
+      JWT_HEADER: Authorization
+      JWT_IN_BODY: "true"
+    ports:
+      - "8082:80"
+    volumes:
+      - onlyoffice_data:/var/www/onlyoffice/Data
+      - onlyoffice_log:/var/log/onlyoffice
+      - onlyoffice_lib:/var/lib/onlyoffice
+
+  document-core:
+    build:
+      context: ./backend
+    container_name: officecollab-document-core
+    restart: unless-stopped
+    environment:
+      # These two are set explicitly (rather than left to the image's own defaults) because they're
+      # docker-network-relative, not "what a browser would use":
+      #   - APP_PUBLIC_BASE_URL is embedded in the ONLYOFFICE editor config as the callbackUrl. ONLYOFFICE
+      #     itself (this container's neighbor, not the user's browser) POSTs to it, so it must be this
+      #     compose network's service name -- "localhost" here would mean "the onlyoffice container itself"
+      #     and the callback would never reach us.
+      #   - APP_CORS_ORIGIN defaults to the Vite dev-server origin (5173) in application.yml, which is wrong
+      #     once nginx is serving the built frontend on port 80 in this stack -- override it here.
+      APP_PUBLIC_BASE_URL: "http://document-core:8080"
+      APP_CORS_ORIGIN: "http://localhost"
+      # Local "db" service, not the Supabase direct-connect host -- see db/local_schema.sql.
+      SPRING_DATASOURCE_URL: "jdbc:postgresql://db:5432/postgres"
+      SPRING_DATASOURCE_USERNAME: "${SPRING_DATASOURCE_USERNAME:-postgres}"
+    env_file:
+      - .env
+    ports:
+      - "8080:8080"
+    depends_on:
+      - onlyoffice
+      - db
+
+  nginx:
+    image: nginx:1.27-alpine
+    container_name: officecollab-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./infra/nginx/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+      - ./frontend/dist:/usr/share/nginx/html:ro
+    depends_on:
+      - document-core
+
+volumes:
+  db_data:
+  onlyoffice_data:
+  onlyoffice_log:
+  onlyoffice_lib:
