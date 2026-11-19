@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="11" day="19"/>
+        <dmTitle>
+          <techName>Office Collaboration Platform</techName>
+          <infoName>General description</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>OfficeCollaboration project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>OfficeCollaboration project</enterpriseName></originator>
+      <applic><displayText><simplePara>POC build, commit dd04d4a</simplePara></displayText></applic>
+      <brexDmRef><dmRef><dmRefIdent><dmCode modelIdentCode="S1000D" systemDiffCode="H" systemCode="04" subSystemCode="1" subSubSystemCode="0"
+        assyCode="0301" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef></brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>Purpose</title>
+        <para>The Office Collaboration Platform is a proof of concept for creating, uploading and co-editing
+          Word, Excel and PowerPoint documents in the browser. Editing is delegated to a self-hosted ONLYOFFICE
+          Document Server; the platform owns document metadata, versions, permissions and file storage.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>Components</title>
+        <para>The system has these runtime components, defined in <verbatimText>docker-compose.yml</verbatimText>:</para>
+        <table frame="all">
+          <title>Runtime components</title>
+          <tgroup cols="3">
+            <colspec colname="c1"/><colspec colname="c2"/><colspec colname="c3"/>
+            <thead><row><entry><para>Component</para></entry><entry><para>Technology / port</para></entry><entry><para>Function</para></entry></row></thead>
+            <tbody>
+              <row><entry><para>nginx</para></entry><entry><para>nginx 1.27, port 80</para></entry>
+                <entry><para>Serves the built React SPA (<verbatimText>frontend/dist</verbatimText>) at <verbatimText>/</verbatimText> and proxies <verbatimText>/api/</verbatimText> to Document Core.</para></entry></row>
+              <row><entry><para>React SPA</para></entry><entry><para>React, TypeScript, Vite, Tailwind</para></entry>
+                <entry><para>Document list (<verbatimText>/</verbatimText>) and editor page (<verbatimText>/documents/:id</verbatimText>).</para></entry></row>
+              <row><entry><para>Document Core</para></entry><entry><para>Java, Spring Boot, port 8080</para></entry>
+                <entry><para>REST API for documents, editor configuration, and ONLYOFFICE content/callback endpoints.</para></entry></row>
+              <row><entry><para>ONLYOFFICE Document Server</para></entry><entry><para>Community edition, port 8082</para></entry>
+                <entry><para>Renders the editor in the browser and returns saved files to Document Core.</para></entry></row>
+              <row><entry><para>PostgreSQL</para></entry><entry><para>Supabase project, or local postgres:15 container</para></entry>
+                <entry><para>Schema <verbatimText>officecollab</verbatimText>: documents, versions, permissions.</para></entry></row>
+              <row><entry><para>S3 bucket</para></entry><entry><para>AWS S3 (not provisioned by the app)</para></entry>
+                <entry><para>Stores the file bytes of each document version.</para></entry></row>
+            </tbody>
+          </tgroup>
+        </table>
+        <para>An interactive architecture diagram is at <verbatimText>docs/diagrams/system-architecture.html</verbatimText>.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>Principal data flows</title>
+        <levelledPara>
+          <title>Open a document</title>
+          <para>The SPA requests <verbatimText>GET /api/v1/documents/{id}/editor-config</verbatimText>. Document Core returns
+            a JWT-signed ONLYOFFICE configuration. The browser loads the ONLYOFFICE editor, which fetches the file from
+            <verbatimText>GET /api/v1/onlyoffice/content</verbatimText>.</para>
+        </levelledPara>
+        <levelledPara>
+          <title>Save a document</title>
+          <para>ONLYOFFICE posts to <verbatimText>POST /api/v1/onlyoffice/callback</verbatimText>. On status 2 (ready for
+            saving) or 3, Document Core downloads the file from the supplied URL, writes it to S3 and records a new
+            row in <verbatimText>document_versions</verbatimText>. Other statuses are ignored.</para>
+        </levelledPara>
+      </levelledPara>
+      <levelledPara>
+        <title>Limitations of this build</title>
+        <para>There is no end-user authentication. Every request acts as a single fixed user
+          (<verbatimText>LocalUser</verbatimText>, id 00000000-0000-0000-0000-000000000001). Presence, AI and parsing
+          features are not built.</para>
+        <note><notePara>The root <verbatimText>README.md</verbatimText> still describes Supabase Auth login. The code does not
+          implement it; this data module describes the code as built.</notePara></note>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

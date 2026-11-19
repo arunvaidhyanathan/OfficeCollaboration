@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pm xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/pm.xsd">
+  <identAndStatusSection>
+    <pmAddress>
+      <pmIdent>
+        <pmCode modelIdentCode="OFFCOLLAB" pmIssuer="A0001" pmNumber="00001" pmVolume="00"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </pmIdent>
+      <pmAddressItems>
+        <issueDate year="2026" month="11" day="19"/>
+        <pmTitle>Office Collaboration Platform - Technical Description</pmTitle>
+      </pmAddressItems>
+    </pmAddress>
+    <pmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>OfficeCollaboration project</enterpriseName></responsiblePartnerCompany>
+      <applic><displayText><simplePara>POC build, commit dd04d4a</simplePara></displayText></applic>
+      <brexDmRef><dmRef><dmRefIdent><dmCode modelIdentCode="S1000D" systemDiffCode="H" systemCode="04" subSystemCode="1" subSubSystemCode="0"
+        assyCode="0301" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef></brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </pmStatus>
+  </identAndStatusSection>
+  <content>
+    <pmEntry>
+      <pmEntryTitle>Description</pmEntryTitle>
+      <dmRef><dmRefIdent><dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="00" subSystemCode="0" subSubSystemCode="0"
+        assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
+      <dmRef><dmRefIdent><dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="01" subSystemCode="0" subSubSystemCode="0"
+        assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
+      <dmRef><dmRefIdent><dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="02" subSystemCode="0" subSubSystemCode="0"
+        assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
+    </pmEntry>
+    <pmEntry>
+      <pmEntryTitle>Operation</pmEntryTitle>
+      <dmRef><dmRefIdent><dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="00" subSystemCode="0" subSubSystemCode="0"
+        assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="100" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef>
+    </pmEntry>
+  </content>
+</pm>

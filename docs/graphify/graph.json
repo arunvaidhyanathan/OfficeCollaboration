@@ -1,0 +1,4043 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "tailwind.config.js",
+      "file_type": "code",
+      "source_file": "frontend/tailwind.config.js",
+      "source_location": "L1",
+      "id": "frontend_tailwind_config_js",
+      "community": 20,
+      "norm_label": "tailwind.config.js"
+    },
+    {
+      "label": "vite.config.ts.timestamp-1788725583848-d89c6c15f46d7.mjs",
+      "file_type": "code",
+      "source_file": "frontend/vite.config.ts.timestamp-1788725583848-d89c6c15f46d7.mjs",
+      "source_location": "L1",
+      "id": "frontend_vite_config_ts_timestamp_1788725583848_d89c6c15f46d7_mjs",
+      "community": 21,
+      "norm_label": "vite.config.ts.timestamp-1788725583848-d89c6c15f46d7.mjs"
+    },
+    {
+      "label": "vite.config.ts",
+      "file_type": "code",
+      "source_file": "frontend/vite.config.ts",
+      "source_location": "L1",
+      "id": "frontend_vite_config_ts",
+      "community": 22,
+      "norm_label": "vite.config.ts"
+    },
+    {
+      "label": "postcss.config.js",
+      "file_type": "code",
+      "source_file": "frontend/postcss.config.js",
+      "source_location": "L1",
+      "id": "frontend_postcss_config_js",
+      "community": 23,
+      "norm_label": "postcss.config.js"
+    },
+    {
+      "label": "App.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/App.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_app_tsx",
+      "community": 1,
+      "norm_label": "app.tsx"
+    },
+    {
+      "label": "App()",
+      "file_type": "code",
+      "source_file": "frontend/src/App.tsx",
+      "source_location": "L5",
+      "id": "src_app_app",
+      "community": 1,
+      "norm_label": "app()"
+    },
+    {
+      "label": "main.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/main.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_main_tsx",
+      "community": 1,
+      "norm_label": "main.tsx"
+    },
+    {
+      "label": "vite-env.d.ts",
+      "file_type": "code",
+      "source_file": "frontend/src/vite-env.d.ts",
+      "source_location": "L1",
+      "id": "frontend_src_vite_env_d_ts",
+      "community": 14,
+      "norm_label": "vite-env.d.ts"
+    },
+    {
+      "label": "ImportMetaEnv",
+      "file_type": "code",
+      "source_file": "frontend/src/vite-env.d.ts",
+      "source_location": "L3",
+      "id": "src_vite_env_d_importmetaenv",
+      "community": 14,
+      "norm_label": "importmetaenv"
+    },
+    {
+      "label": "ImportMeta",
+      "file_type": "code",
+      "source_file": "frontend/src/vite-env.d.ts",
+      "source_location": "L8",
+      "id": "src_vite_env_d_importmeta",
+      "community": 14,
+      "norm_label": "importmeta"
+    },
+    {
+      "label": "InlineRenameLabel.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/InlineRenameLabel.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_components_inlinerenamelabel_tsx",
+      "community": 1,
+      "norm_label": "inlinerenamelabel.tsx"
+    },
+    {
+      "label": "InlineRenameLabelProps",
+      "file_type": "code",
+      "source_file": "frontend/src/components/InlineRenameLabel.tsx",
+      "source_location": "L3",
+      "id": "components_inlinerenamelabel_inlinerenamelabelprops",
+      "community": 1,
+      "norm_label": "inlinerenamelabelprops"
+    },
+    {
+      "label": "InlineRenameLabel()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/InlineRenameLabel.tsx",
+      "source_location": "L10",
+      "id": "components_inlinerenamelabel_inlinerenamelabel",
+      "community": 1,
+      "norm_label": "inlinerenamelabel()"
+    },
+    {
+      "label": "DocumentRow.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_components_documentrow_tsx",
+      "community": 1,
+      "norm_label": "documentrow.tsx"
+    },
+    {
+      "label": "DocumentRowProps",
+      "file_type": "code",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L6",
+      "id": "components_documentrow_documentrowprops",
+      "community": 1,
+      "norm_label": "documentrowprops"
+    },
+    {
+      "label": "DocumentRow()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L12",
+      "id": "components_documentrow_documentrow",
+      "community": 1,
+      "norm_label": "documentrow()"
+    },
+    {
+      "label": "NewDocumentMenu.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/NewDocumentMenu.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_components_newdocumentmenu_tsx",
+      "community": 2,
+      "norm_label": "newdocumentmenu.tsx"
+    },
+    {
+      "label": "NewDocumentMenuProps",
+      "file_type": "code",
+      "source_file": "frontend/src/components/NewDocumentMenu.tsx",
+      "source_location": "L4",
+      "id": "components_newdocumentmenu_newdocumentmenuprops",
+      "community": 2,
+      "norm_label": "newdocumentmenuprops"
+    },
+    {
+      "label": "NewDocumentMenu()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/NewDocumentMenu.tsx",
+      "source_location": "L10",
+      "id": "components_newdocumentmenu_newdocumentmenu",
+      "community": 2,
+      "norm_label": "newdocumentmenu()"
+    },
+    {
+      "label": "DocumentCard.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_components_documentcard_tsx",
+      "community": 1,
+      "norm_label": "documentcard.tsx"
+    },
+    {
+      "label": "DocumentCardProps",
+      "file_type": "code",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L6",
+      "id": "components_documentcard_documentcardprops",
+      "community": 1,
+      "norm_label": "documentcardprops"
+    },
+    {
+      "label": "DocumentCard()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L12",
+      "id": "components_documentcard_documentcard",
+      "community": 1,
+      "norm_label": "documentcard()"
+    },
+    {
+      "label": "Sidebar.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_components_sidebar_tsx",
+      "community": 2,
+      "norm_label": "sidebar.tsx"
+    },
+    {
+      "label": "FilterValue",
+      "file_type": "code",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L5",
+      "id": "components_sidebar_filtervalue",
+      "community": 2,
+      "norm_label": "filtervalue"
+    },
+    {
+      "label": "SidebarProps",
+      "file_type": "code",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L7",
+      "id": "components_sidebar_sidebarprops",
+      "community": 2,
+      "norm_label": "sidebarprops"
+    },
+    {
+      "label": "NAV_ITEMS",
+      "file_type": "code",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L15",
+      "id": "components_sidebar_nav_items",
+      "community": 2,
+      "norm_label": "nav_items"
+    },
+    {
+      "label": "Sidebar()",
+      "file_type": "code",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L22",
+      "id": "components_sidebar_sidebar",
+      "community": 2,
+      "norm_label": "sidebar()"
+    },
+    {
+      "label": "api.ts",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L1",
+      "id": "frontend_src_lib_api_ts",
+      "community": 1,
+      "norm_label": "api.ts"
+    },
+    {
+      "label": "Permission",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L3",
+      "id": "lib_api_permission",
+      "community": 0,
+      "norm_label": "permission"
+    },
+    {
+      "label": "DocumentSummary",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L5",
+      "id": "lib_api_documentsummary",
+      "community": 1,
+      "norm_label": "documentsummary"
+    },
+    {
+      "label": "OnlyOfficeConfig",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L14",
+      "id": "lib_api_onlyofficeconfig",
+      "community": 1,
+      "norm_label": "onlyofficeconfig"
+    },
+    {
+      "label": "ApiError",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L16",
+      "id": "lib_api_apierror",
+      "community": 1,
+      "norm_label": "apierror"
+    },
+    {
+      "label": ".constructor()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L18",
+      "id": "lib_api_apierror_constructor",
+      "community": 1,
+      "norm_label": ".constructor()"
+    },
+    {
+      "label": "request()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L25",
+      "id": "lib_api_request",
+      "community": 1,
+      "norm_label": "request()"
+    },
+    {
+      "label": "listDocuments()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L37",
+      "id": "lib_api_listdocuments",
+      "community": 1,
+      "norm_label": "listdocuments()"
+    },
+    {
+      "label": "uploadDocument()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L41",
+      "id": "lib_api_uploaddocument",
+      "community": 1,
+      "norm_label": "uploaddocument()"
+    },
+    {
+      "label": "createBlankDocument()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L58",
+      "id": "lib_api_createblankdocument",
+      "community": 1,
+      "norm_label": "createblankdocument()"
+    },
+    {
+      "label": "getEditorConfig()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L69",
+      "id": "lib_api_geteditorconfig",
+      "community": 1,
+      "norm_label": "geteditorconfig()"
+    },
+    {
+      "label": "renameDocument()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L73",
+      "id": "lib_api_renamedocument",
+      "community": 1,
+      "norm_label": "renamedocument()"
+    },
+    {
+      "label": "downloadUrl()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L82",
+      "id": "lib_api_downloadurl",
+      "community": 1,
+      "norm_label": "downloadurl()"
+    },
+    {
+      "label": "fileType.ts",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L1",
+      "id": "frontend_src_lib_filetype_ts",
+      "community": 2,
+      "norm_label": "filetype.ts"
+    },
+    {
+      "label": "FileKind",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L3",
+      "id": "lib_filetype_filekind",
+      "community": 2,
+      "norm_label": "filekind"
+    },
+    {
+      "label": "FileTypeInfo",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L5",
+      "id": "lib_filetype_filetypeinfo",
+      "community": 2,
+      "norm_label": "filetypeinfo"
+    },
+    {
+      "label": "DOCX",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L13",
+      "id": "lib_filetype_docx",
+      "community": 2,
+      "norm_label": "docx"
+    },
+    {
+      "label": "XLSX",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L14",
+      "id": "lib_filetype_xlsx",
+      "community": 2,
+      "norm_label": "xlsx"
+    },
+    {
+      "label": "PPTX",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L15",
+      "id": "lib_filetype_pptx",
+      "community": 2,
+      "norm_label": "pptx"
+    },
+    {
+      "label": "OTHER",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L16",
+      "id": "lib_filetype_other",
+      "community": 2,
+      "norm_label": "other"
+    },
+    {
+      "label": "fileTypeOf()",
+      "file_type": "code",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L18",
+      "id": "lib_filetype_filetypeof",
+      "community": 1,
+      "norm_label": "filetypeof()"
+    },
+    {
+      "label": "Editor.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_pages_editor_tsx",
+      "community": 1,
+      "norm_label": "editor.tsx"
+    },
+    {
+      "label": "Editor()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L9",
+      "id": "pages_editor_editor",
+      "community": 1,
+      "norm_label": "editor()"
+    },
+    {
+      "label": "DocumentList.tsx",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L1",
+      "id": "frontend_src_pages_documentlist_tsx",
+      "community": 1,
+      "norm_label": "documentlist.tsx"
+    },
+    {
+      "label": "ViewMode",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L17",
+      "id": "pages_documentlist_viewmode",
+      "community": 1,
+      "norm_label": "viewmode"
+    },
+    {
+      "label": "DocumentList()",
+      "file_type": "code",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L19",
+      "id": "pages_documentlist_documentlist",
+      "community": 1,
+      "norm_label": "documentlist()"
+    },
+    {
+      "label": "DocumentCoreApplication.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/DocumentCoreApplication.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_documentcoreapplication_java",
+      "community": 15,
+      "norm_label": "documentcoreapplication.java"
+    },
+    {
+      "label": "DocumentCoreApplication",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/DocumentCoreApplication.java",
+      "source_location": "L6",
+      "id": "documentcore_documentcoreapplication_documentcoreapplication",
+      "community": 15,
+      "norm_label": "documentcoreapplication"
+    },
+    {
+      "label": ".main()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/DocumentCoreApplication.java",
+      "source_location": "L9",
+      "id": "documentcore_documentcoreapplication_documentcoreapplication_main",
+      "community": 15,
+      "norm_label": ".main()"
+    },
+    {
+      "label": "NewDocumentRequest.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/dto/NewDocumentRequest.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_dto_newdocumentrequest_java",
+      "community": 24,
+      "norm_label": "newdocumentrequest.java"
+    },
+    {
+      "label": "DocumentListItemDto.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/dto/DocumentListItemDto.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_dto_documentlistitemdto_java",
+      "community": 25,
+      "norm_label": "documentlistitemdto.java"
+    },
+    {
+      "label": "RenameDocumentRequest.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/dto/RenameDocumentRequest.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_dto_renamedocumentrequest_java",
+      "community": 26,
+      "norm_label": "renamedocumentrequest.java"
+    },
+    {
+      "label": "DocumentDto.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/dto/DocumentDto.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_dto_documentdto_java",
+      "community": 27,
+      "norm_label": "documentdto.java"
+    },
+    {
+      "label": "DocumentRepository.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentRepository.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_repository_documentrepository_java",
+      "community": 4,
+      "norm_label": "documentrepository.java"
+    },
+    {
+      "label": "DocumentRepository",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentRepository.java",
+      "source_location": "L12",
+      "id": "repository_documentrepository_documentrepository",
+      "community": 4,
+      "norm_label": "documentrepository"
+    },
+    {
+      "label": ".findAccessibleDocuments()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentRepository.java",
+      "source_location": "L19",
+      "id": "repository_documentrepository_documentrepository_findaccessibledocuments",
+      "community": 4,
+      "norm_label": ".findaccessibledocuments()"
+    },
+    {
+      "label": "DocumentVersionRepository.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentVersionRepository.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_repository_documentversionrepository_java",
+      "community": 3,
+      "norm_label": "documentversionrepository.java"
+    },
+    {
+      "label": "DocumentVersionRepository",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentVersionRepository.java",
+      "source_location": "L10",
+      "id": "repository_documentversionrepository_documentversionrepository",
+      "community": 3,
+      "norm_label": "documentversionrepository"
+    },
+    {
+      "label": ".findByDocumentIdOrderByVersionNumberDesc()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentVersionRepository.java",
+      "source_location": "L12",
+      "id": "repository_documentversionrepository_documentversionrepository_findbydocumentidorderbyversionnumberdesc",
+      "community": 3,
+      "norm_label": ".findbydocumentidorderbyversionnumberdesc()"
+    },
+    {
+      "label": ".findTopByDocumentIdOrderByVersionNumberDesc()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentVersionRepository.java",
+      "source_location": "L14",
+      "id": "repository_documentversionrepository_documentversionrepository_findtopbydocumentidorderbyversionnumberdesc",
+      "community": 3,
+      "norm_label": ".findtopbydocumentidorderbyversionnumberdesc()"
+    },
+    {
+      "label": "DocumentPermissionRepository.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentPermissionRepository.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_repository_documentpermissionrepository_java",
+      "community": 0,
+      "norm_label": "documentpermissionrepository.java"
+    },
+    {
+      "label": "DocumentPermissionRepository",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentPermissionRepository.java",
+      "source_location": "L10",
+      "id": "repository_documentpermissionrepository_documentpermissionrepository",
+      "community": 0,
+      "norm_label": "documentpermissionrepository"
+    },
+    {
+      "label": ".findById_DocumentIdAndId_UserId()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentPermissionRepository.java",
+      "source_location": "L12",
+      "id": "repository_documentpermissionrepository_documentpermissionrepository_findbyid_documentidandid_userid",
+      "community": 0,
+      "norm_label": ".findbyid_documentidandid_userid()"
+    },
+    {
+      "label": "SecurityConfig.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_config_securityconfig_java",
+      "community": 11,
+      "norm_label": "securityconfig.java"
+    },
+    {
+      "label": "SecurityConfig",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L13",
+      "id": "config_securityconfig_securityconfig",
+      "community": 11,
+      "norm_label": "securityconfig"
+    },
+    {
+      "label": "WebMvcConfigurer",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "webmvcconfigurer",
+      "community": 11,
+      "norm_label": "webmvcconfigurer"
+    },
+    {
+      "label": ".SecurityConfig()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L18",
+      "id": "config_securityconfig_securityconfig_securityconfig",
+      "community": 11,
+      "norm_label": ".securityconfig()"
+    },
+    {
+      "label": ".addCorsMappings()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L22",
+      "id": "config_securityconfig_securityconfig_addcorsmappings",
+      "community": 11,
+      "norm_label": ".addcorsmappings()"
+    },
+    {
+      "label": "S3Config.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/S3Config.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_config_s3config_java",
+      "community": 13,
+      "norm_label": "s3config.java"
+    },
+    {
+      "label": "S3Config",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/S3Config.java",
+      "source_location": "L11",
+      "id": "config_s3config_s3config",
+      "community": 13,
+      "norm_label": "s3config"
+    },
+    {
+      "label": ".s3Client()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/S3Config.java",
+      "source_location": "L21",
+      "id": "config_s3config_s3config_s3client",
+      "community": 13,
+      "norm_label": ".s3client()"
+    },
+    {
+      "label": ".s3Presigner()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/S3Config.java",
+      "source_location": "L29",
+      "id": "config_s3config_s3config_s3presigner",
+      "community": 13,
+      "norm_label": ".s3presigner()"
+    },
+    {
+      "label": "LocalUser.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/security/LocalUser.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_security_localuser_java",
+      "community": 16,
+      "norm_label": "localuser.java"
+    },
+    {
+      "label": "LocalUser",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/security/LocalUser.java",
+      "source_location": "L6",
+      "id": "security_localuser_localuser",
+      "community": 16,
+      "norm_label": "localuser"
+    },
+    {
+      "label": ".LocalUser()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/security/LocalUser.java",
+      "source_location": "L11",
+      "id": "security_localuser_localuser_localuser",
+      "community": 16,
+      "norm_label": ".localuser()"
+    },
+    {
+      "label": "DocumentController.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_controller_documentcontroller_java",
+      "community": 4,
+      "norm_label": "documentcontroller.java"
+    },
+    {
+      "label": "DocumentController",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L26",
+      "id": "controller_documentcontroller_documentcontroller",
+      "community": 4,
+      "norm_label": "documentcontroller"
+    },
+    {
+      "label": ".DocumentController()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L33",
+      "id": "controller_documentcontroller_documentcontroller_documentcontroller",
+      "community": 4,
+      "norm_label": ".documentcontroller()"
+    },
+    {
+      "label": ".list()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L38",
+      "id": "controller_documentcontroller_documentcontroller_list",
+      "community": 4,
+      "norm_label": ".list()"
+    },
+    {
+      "label": ".upload()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L43",
+      "id": "controller_documentcontroller_documentcontroller_upload",
+      "community": 0,
+      "norm_label": ".upload()"
+    },
+    {
+      "label": ".createFromTemplate()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L49",
+      "id": "controller_documentcontroller_documentcontroller_createfromtemplate",
+      "community": 4,
+      "norm_label": ".createfromtemplate()"
+    },
+    {
+      "label": ".get()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L54",
+      "id": "controller_documentcontroller_documentcontroller_get",
+      "community": 3,
+      "norm_label": ".get()"
+    },
+    {
+      "label": ".rename()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L59",
+      "id": "controller_documentcontroller_documentcontroller_rename",
+      "community": 4,
+      "norm_label": ".rename()"
+    },
+    {
+      "label": ".editorConfig()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L64",
+      "id": "controller_documentcontroller_documentcontroller_editorconfig",
+      "community": 4,
+      "norm_label": ".editorconfig()"
+    },
+    {
+      "label": "ApiExceptionHandler.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_controller_apiexceptionhandler_java",
+      "community": 12,
+      "norm_label": "apiexceptionhandler.java"
+    },
+    {
+      "label": "ApiExceptionHandler",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L12",
+      "id": "controller_apiexceptionhandler_apiexceptionhandler",
+      "community": 12,
+      "norm_label": "apiexceptionhandler"
+    },
+    {
+      "label": ".notFound()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L15",
+      "id": "controller_apiexceptionhandler_apiexceptionhandler_notfound",
+      "community": 12,
+      "norm_label": ".notfound()"
+    },
+    {
+      "label": ".forbidden()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L20",
+      "id": "controller_apiexceptionhandler_apiexceptionhandler_forbidden",
+      "community": 12,
+      "norm_label": ".forbidden()"
+    },
+    {
+      "label": ".badRequest()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L25",
+      "id": "controller_apiexceptionhandler_apiexceptionhandler_badrequest",
+      "community": 12,
+      "norm_label": ".badrequest()"
+    },
+    {
+      "label": "OnlyOfficeCallbackController.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_controller_onlyofficecallbackcontroller_java",
+      "community": 3,
+      "norm_label": "onlyofficecallbackcontroller.java"
+    },
+    {
+      "label": "OnlyOfficeCallbackController",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L34",
+      "id": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "community": 3,
+      "norm_label": "onlyofficecallbackcontroller"
+    },
+    {
+      "label": ".OnlyOfficeCallbackController()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L47",
+      "id": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "community": 3,
+      "norm_label": ".onlyofficecallbackcontroller()"
+    },
+    {
+      "label": ".content()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L63",
+      "id": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_content",
+      "community": 6,
+      "norm_label": ".content()"
+    },
+    {
+      "label": ".callback()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L72",
+      "id": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_callback",
+      "community": 3,
+      "norm_label": ".callback()"
+    },
+    {
+      "label": ".extractToken()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L100",
+      "id": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_extracttoken",
+      "community": 3,
+      "norm_label": ".extracttoken()"
+    },
+    {
+      "label": "S3StorageService.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_s3storageservice_java",
+      "community": 6,
+      "norm_label": "s3storageservice.java"
+    },
+    {
+      "label": "S3StorageService",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L16",
+      "id": "service_s3storageservice_s3storageservice",
+      "community": 6,
+      "norm_label": "s3storageservice"
+    },
+    {
+      "label": ".S3StorageService()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L25",
+      "id": "service_s3storageservice_s3storageservice_s3storageservice",
+      "community": 6,
+      "norm_label": ".s3storageservice()"
+    },
+    {
+      "label": ".upload()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L33",
+      "id": "service_s3storageservice_s3storageservice_upload",
+      "community": 6,
+      "norm_label": ".upload()"
+    },
+    {
+      "label": ".presignedGetUrl()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L47",
+      "id": "service_s3storageservice_s3storageservice_presignedgeturl",
+      "community": 6,
+      "norm_label": ".presignedgeturl()"
+    },
+    {
+      "label": ".download()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L65",
+      "id": "service_s3storageservice_s3storageservice_download",
+      "community": 6,
+      "norm_label": ".download()"
+    },
+    {
+      "label": "ForbiddenException.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/ForbiddenException.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_forbiddenexception_java",
+      "community": 9,
+      "norm_label": "forbiddenexception.java"
+    },
+    {
+      "label": "ForbiddenException",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/ForbiddenException.java",
+      "source_location": "L3",
+      "id": "service_forbiddenexception_forbiddenexception",
+      "community": 9,
+      "norm_label": "forbiddenexception"
+    },
+    {
+      "label": "RuntimeException",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "runtimeexception",
+      "community": 9,
+      "norm_label": "runtimeexception"
+    },
+    {
+      "label": ".ForbiddenException()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/ForbiddenException.java",
+      "source_location": "L4",
+      "id": "service_forbiddenexception_forbiddenexception_forbiddenexception",
+      "community": 9,
+      "norm_label": ".forbiddenexception()"
+    },
+    {
+      "label": "EditorConfigService.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_editorconfigservice_java",
+      "community": 0,
+      "norm_label": "editorconfigservice.java"
+    },
+    {
+      "label": "EditorConfigService",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L14",
+      "id": "service_editorconfigservice_editorconfigservice",
+      "community": 0,
+      "norm_label": "editorconfigservice"
+    },
+    {
+      "label": ".EditorConfigService()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L21",
+      "id": "service_editorconfigservice_editorconfigservice_editorconfigservice",
+      "community": 0,
+      "norm_label": ".editorconfigservice()"
+    },
+    {
+      "label": ".buildSignedConfig()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L29",
+      "id": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "community": 0,
+      "norm_label": ".buildsignedconfig()"
+    },
+    {
+      "label": "DocumentService.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_documentservice_java",
+      "community": 0,
+      "norm_label": "documentservice.java"
+    },
+    {
+      "label": "DocumentService",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L26",
+      "id": "service_documentservice_documentservice",
+      "community": 0,
+      "norm_label": "documentservice"
+    },
+    {
+      "label": ".DocumentService()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L34",
+      "id": "service_documentservice_documentservice_documentservice",
+      "community": 0,
+      "norm_label": ".documentservice()"
+    },
+    {
+      "label": ".listForUser()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L44",
+      "id": "service_documentservice_documentservice_listforuser",
+      "community": 4,
+      "norm_label": ".listforuser()"
+    },
+    {
+      "label": ".createFromUpload()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L48",
+      "id": "service_documentservice_documentservice_createfromupload",
+      "community": 0,
+      "norm_label": ".createfromupload()"
+    },
+    {
+      "label": ".createFromTemplate()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L69",
+      "id": "service_documentservice_documentservice_createfromtemplate",
+      "community": 0,
+      "norm_label": ".createfromtemplate()"
+    },
+    {
+      "label": ".createDocument()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L87",
+      "id": "service_documentservice_documentservice_createdocument",
+      "community": 0,
+      "norm_label": ".createdocument()"
+    },
+    {
+      "label": ".rename()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L139",
+      "id": "service_documentservice_documentservice_rename",
+      "community": 0,
+      "norm_label": ".rename()"
+    },
+    {
+      "label": ".getDetail()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L153",
+      "id": "service_documentservice_documentservice_getdetail",
+      "community": 0,
+      "norm_label": ".getdetail()"
+    },
+    {
+      "label": ".loadForEditorConfig()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L166",
+      "id": "service_documentservice_documentservice_loadforeditorconfig",
+      "community": 0,
+      "norm_label": ".loadforeditorconfig()"
+    },
+    {
+      "label": ".requirePermission()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L175",
+      "id": "service_documentservice_documentservice_requirepermission",
+      "community": 0,
+      "norm_label": ".requirepermission()"
+    },
+    {
+      "label": ".toDto()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L181",
+      "id": "service_documentservice_documentservice_todto",
+      "community": 0,
+      "norm_label": ".todto()"
+    },
+    {
+      "label": "OnlyOfficeDocumentTypes.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_onlyofficedocumenttypes_java",
+      "community": 0,
+      "norm_label": "onlyofficedocumenttypes.java"
+    },
+    {
+      "label": "OnlyOfficeDocumentTypes",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L12",
+      "id": "service_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "community": 0,
+      "norm_label": "onlyofficedocumenttypes"
+    },
+    {
+      "label": ".OnlyOfficeDocumentTypes()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L24",
+      "id": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "community": 0,
+      "norm_label": ".onlyofficedocumenttypes()"
+    },
+    {
+      "label": ".extensionOf()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L27",
+      "id": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_extensionof",
+      "community": 0,
+      "norm_label": ".extensionof()"
+    },
+    {
+      "label": ".documentTypeFor()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L36",
+      "id": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_documenttypefor",
+      "community": 0,
+      "norm_label": ".documenttypefor()"
+    },
+    {
+      "label": ".mimeTypeForTemplateExtension()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L50",
+      "id": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_mimetypefortemplateextension",
+      "community": 0,
+      "norm_label": ".mimetypefortemplateextension()"
+    },
+    {
+      "label": "OnlyOfficeCallbackService.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_onlyofficecallbackservice_java",
+      "community": 3,
+      "norm_label": "onlyofficecallbackservice.java"
+    },
+    {
+      "label": "OnlyOfficeCallbackService",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L30",
+      "id": "service_onlyofficecallbackservice_onlyofficecallbackservice",
+      "community": 3,
+      "norm_label": "onlyofficecallbackservice"
+    },
+    {
+      "label": ".OnlyOfficeCallbackService()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L42",
+      "id": "service_onlyofficecallbackservice_onlyofficecallbackservice_onlyofficecallbackservice",
+      "community": 3,
+      "norm_label": ".onlyofficecallbackservice()"
+    },
+    {
+      "label": ".handleCallback()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L53",
+      "id": "service_onlyofficecallbackservice_onlyofficecallbackservice_handlecallback",
+      "community": 3,
+      "norm_label": ".handlecallback()"
+    },
+    {
+      "label": ".downloadFile()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L102",
+      "id": "service_onlyofficecallbackservice_onlyofficecallbackservice_downloadfile",
+      "community": 3,
+      "norm_label": ".downloadfile()"
+    },
+    {
+      "label": "NotFoundException.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/NotFoundException.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_notfoundexception_java",
+      "community": 9,
+      "norm_label": "notfoundexception.java"
+    },
+    {
+      "label": "NotFoundException",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/NotFoundException.java",
+      "source_location": "L3",
+      "id": "service_notfoundexception_notfoundexception",
+      "community": 9,
+      "norm_label": "notfoundexception"
+    },
+    {
+      "label": ".NotFoundException()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/NotFoundException.java",
+      "source_location": "L4",
+      "id": "service_notfoundexception_notfoundexception_notfoundexception",
+      "community": 9,
+      "norm_label": ".notfoundexception()"
+    },
+    {
+      "label": "OnlyOfficeJwtService.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_service_onlyofficejwtservice_java",
+      "community": 10,
+      "norm_label": "onlyofficejwtservice.java"
+    },
+    {
+      "label": "OnlyOfficeJwtService",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L25",
+      "id": "service_onlyofficejwtservice_onlyofficejwtservice",
+      "community": 10,
+      "norm_label": "onlyofficejwtservice"
+    },
+    {
+      "label": ".OnlyOfficeJwtService()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L30",
+      "id": "service_onlyofficejwtservice_onlyofficejwtservice_onlyofficejwtservice",
+      "community": 10,
+      "norm_label": ".onlyofficejwtservice()"
+    },
+    {
+      "label": ".sign()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L41",
+      "id": "service_onlyofficejwtservice_onlyofficejwtservice_sign",
+      "community": 10,
+      "norm_label": ".sign()"
+    },
+    {
+      "label": ".verify()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L50",
+      "id": "service_onlyofficejwtservice_onlyofficejwtservice_verify",
+      "community": 10,
+      "norm_label": ".verify()"
+    },
+    {
+      "label": ".requireKey()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L59",
+      "id": "service_onlyofficejwtservice_onlyofficejwtservice_requirekey",
+      "community": 10,
+      "norm_label": ".requirekey()"
+    },
+    {
+      "label": "DocumentPermissionId.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermissionId.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_domain_documentpermissionid_java",
+      "community": 17,
+      "norm_label": "documentpermissionid.java"
+    },
+    {
+      "label": "DocumentPermissionId",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermissionId.java",
+      "source_location": "L14",
+      "id": "domain_documentpermissionid_documentpermissionid",
+      "community": 17,
+      "norm_label": "documentpermissionid"
+    },
+    {
+      "label": "Serializable",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "serializable",
+      "community": 17,
+      "norm_label": "serializable"
+    },
+    {
+      "label": "DocumentPermission.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermission.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_domain_documentpermission_java",
+      "community": 18,
+      "norm_label": "documentpermission.java"
+    },
+    {
+      "label": "DocumentPermission",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermission.java",
+      "source_location": "L16",
+      "id": "domain_documentpermission_documentpermission",
+      "community": 18,
+      "norm_label": "documentpermission"
+    },
+    {
+      "label": "Document.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/Document.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_domain_document_java",
+      "community": 6,
+      "norm_label": "document.java"
+    },
+    {
+      "label": "Document",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/Document.java",
+      "source_location": "L23",
+      "id": "domain_document_document",
+      "community": 6,
+      "norm_label": "document"
+    },
+    {
+      "label": "PermissionLevel.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_domain_permissionlevel_java",
+      "community": 0,
+      "norm_label": "permissionlevel.java"
+    },
+    {
+      "label": "PermissionLevel()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L12",
+      "id": "domain_permissionlevel_permissionlevel",
+      "community": 0,
+      "norm_label": "permissionlevel()"
+    },
+    {
+      "label": "dbValue()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L16",
+      "id": "domain_permissionlevel_dbvalue",
+      "community": 0,
+      "norm_label": "dbvalue()"
+    },
+    {
+      "label": "fromDbValue()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L20",
+      "id": "domain_permissionlevel_fromdbvalue",
+      "community": 0,
+      "norm_label": "fromdbvalue()"
+    },
+    {
+      "label": "allowsEdit()",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L30",
+      "id": "domain_permissionlevel_allowsedit",
+      "community": 0,
+      "norm_label": "allowsedit()"
+    },
+    {
+      "label": "DocumentVersion.java",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentVersion.java",
+      "source_location": "L1",
+      "id": "backend_src_main_java_com_officecollab_documentcore_domain_documentversion_java",
+      "community": 19,
+      "norm_label": "documentversion.java"
+    },
+    {
+      "label": "DocumentVersion",
+      "file_type": "code",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentVersion.java",
+      "source_location": "L17",
+      "id": "domain_documentversion_documentversion",
+      "community": 19,
+      "norm_label": "documentversion"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "readme_md",
+      "community": 5,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "Office Collaboration \u2014 POC",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "id": "officecollaboration_readme_office_collaboration_poc",
+      "community": 5,
+      "norm_label": "office collaboration \u2014 poc"
+    },
+    {
+      "label": "What's here",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "id": "officecollaboration_readme_what_s_here",
+      "community": 5,
+      "norm_label": "what's here"
+    },
+    {
+      "label": "code:block1 (backend/    Spring Boot 3 / Java 21 \"Document Core\" service)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "id": "officecollaboration_readme_codeblock_1",
+      "community": 5,
+      "norm_label": "code:block1 (backend/    spring boot 3 / java 21 \"document core\" service)"
+    },
+    {
+      "label": "Assumption this whole build rests on",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "id": "officecollaboration_readme_assumption_this_whole_build_rests_on",
+      "community": 5,
+      "norm_label": "assumption this whole build rests on"
+    },
+    {
+      "label": "Before you can run it",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "id": "officecollaboration_readme_before_you_can_run_it",
+      "community": 5,
+      "norm_label": "before you can run it"
+    },
+    {
+      "label": "Running it",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "id": "officecollaboration_readme_running_it",
+      "community": 5,
+      "norm_label": "running it"
+    },
+    {
+      "label": "code:bash (docker compose up --build)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "id": "officecollaboration_readme_codeblock_2",
+      "community": 5,
+      "norm_label": "code:bash (docker compose up --build)"
+    },
+    {
+      "label": "What was NOT verified in the sandbox this was built in",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "id": "officecollaboration_readme_what_was_not_verified_in_the_sandbox_this_was_built_in",
+      "community": 5,
+      "norm_label": "what was not verified in the sandbox this was built in"
+    },
+    {
+      "label": "Local dev without the full docker-compose stack",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L65",
+      "id": "officecollaboration_readme_local_dev_without_the_full_docker_compose_stack",
+      "community": 5,
+      "norm_label": "local dev without the full docker-compose stack"
+    },
+    {
+      "label": "What's deliberately not built (Phase 2)",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L76",
+      "id": "officecollaboration_readme_what_s_deliberately_not_built_phase_2",
+      "community": 5,
+      "norm_label": "what's deliberately not built (phase 2)"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L1",
+      "id": "frontend_readme_md",
+      "community": 7,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "OfficeCollab Frontend (POC)",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L1",
+      "id": "frontend_readme_officecollab_frontend_poc",
+      "community": 7,
+      "norm_label": "officecollab frontend (poc)"
+    },
+    {
+      "label": "Stack",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L6",
+      "id": "frontend_readme_stack",
+      "community": 7,
+      "norm_label": "stack"
+    },
+    {
+      "label": "Setup",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L13",
+      "id": "frontend_readme_setup",
+      "community": 7,
+      "norm_label": "setup"
+    },
+    {
+      "label": "code:bash (cp .env.example .env   # defaults already point at the share)",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L15",
+      "id": "frontend_readme_codeblock_1",
+      "community": 7,
+      "norm_label": "code:bash (cp .env.example .env   # defaults already point at the share)"
+    },
+    {
+      "label": "Environment variables",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L21",
+      "id": "frontend_readme_environment_variables",
+      "community": 7,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "How it works",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L30",
+      "id": "frontend_readme_how_it_works",
+      "community": 7,
+      "norm_label": "how it works"
+    },
+    {
+      "label": "Simplifications / TODOs for this POC",
+      "file_type": "document",
+      "source_file": "frontend/README.md",
+      "source_location": "L49",
+      "id": "frontend_readme_simplifications_todos_for_this_poc",
+      "community": 7,
+      "norm_label": "simplifications / todos for this poc"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L1",
+      "id": "backend_readme_md",
+      "community": 8,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "document-core",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L1",
+      "id": "backend_readme_document_core",
+      "community": 8,
+      "norm_label": "document-core"
+    },
+    {
+      "label": "Running it",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L8",
+      "id": "backend_readme_running_it",
+      "community": 8,
+      "norm_label": "running it"
+    },
+    {
+      "label": "code:block1 (mvn spring-boot:run)",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L10",
+      "id": "backend_readme_codeblock_1",
+      "community": 8,
+      "norm_label": "code:block1 (mvn spring-boot:run)"
+    },
+    {
+      "label": "Endpoints (all under `/api/v1` unless noted)",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L17",
+      "id": "backend_readme_endpoints_all_under_api_v1_unless_noted",
+      "community": 8,
+      "norm_label": "endpoints (all under `/api/v1` unless noted)"
+    },
+    {
+      "label": "Environment variables",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L32",
+      "id": "backend_readme_environment_variables",
+      "community": 8,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "Deliberate simplifications for this POC (see task description for what's explicitly deferred)",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L53",
+      "id": "backend_readme_deliberate_simplifications_for_this_poc_see_task_description_for_what_s_explicitly_deferred",
+      "community": 8,
+      "norm_label": "deliberate simplifications for this poc (see task description for what's explicitly deferred)"
+    },
+    {
+      "label": "Things a human still needs to supply",
+      "file_type": "document",
+      "source_file": "backend/README.md",
+      "source_location": "L67",
+      "id": "backend_readme_things_a_human_still_needs_to_supply",
+      "community": 8,
+      "norm_label": "things a human still needs to supply"
+    }
+  ],
+  "links": [
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_app_tsx",
+      "target": "frontend_src_pages_documentlist_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_app_tsx",
+      "target": "frontend_src_pages_editor_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/App.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_app_tsx",
+      "target": "src_app_app",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/main.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_main_tsx",
+      "target": "frontend_src_app_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/vite-env.d.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_vite_env_d_ts",
+      "target": "src_vite_env_d_importmetaenv",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/vite-env.d.ts",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "frontend_src_vite_env_d_ts",
+      "target": "src_vite_env_d_importmeta",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/InlineRenameLabel.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_components_inlinerenamelabel_tsx",
+      "target": "components_inlinerenamelabel_inlinerenamelabelprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/InlineRenameLabel.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_src_components_inlinerenamelabel_tsx",
+      "target": "components_inlinerenamelabel_inlinerenamelabel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentrow_tsx",
+      "target": "frontend_src_components_inlinerenamelabel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentcard_tsx",
+      "target": "frontend_src_components_inlinerenamelabel_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentrow_tsx",
+      "target": "frontend_src_lib_filetype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentrow_tsx",
+      "target": "lib_filetype_filetypeof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentrow_tsx",
+      "target": "frontend_src_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentrow_tsx",
+      "target": "lib_api_documentsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentrow_tsx",
+      "target": "components_documentrow_documentrowprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentrow_tsx",
+      "target": "components_documentrow_documentrow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "frontend_src_components_documentrow_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/DocumentRow.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_documentrow_documentrow",
+      "target": "lib_filetype_filetypeof"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/NewDocumentMenu.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_src_components_newdocumentmenu_tsx",
+      "target": "components_newdocumentmenu_newdocumentmenuprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/NewDocumentMenu.tsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "frontend_src_components_newdocumentmenu_tsx",
+      "target": "components_newdocumentmenu_newdocumentmenu",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_components_sidebar_tsx",
+      "target": "frontend_src_components_newdocumentmenu_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentcard_tsx",
+      "target": "frontend_src_lib_filetype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentcard_tsx",
+      "target": "lib_filetype_filetypeof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentcard_tsx",
+      "target": "frontend_src_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentcard_tsx",
+      "target": "lib_api_documentsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentcard_tsx",
+      "target": "components_documentcard_documentcardprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_src_components_documentcard_tsx",
+      "target": "components_documentcard_documentcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "frontend_src_components_documentcard_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/components/DocumentCard.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "components_documentcard_documentcard",
+      "target": "lib_filetype_filetypeof"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_components_sidebar_tsx",
+      "target": "frontend_src_lib_filetype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_components_sidebar_tsx",
+      "target": "lib_filetype_filekind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_components_sidebar_tsx",
+      "target": "components_sidebar_filtervalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "frontend_src_components_sidebar_tsx",
+      "target": "components_sidebar_sidebarprops",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_src_components_sidebar_tsx",
+      "target": "components_sidebar_nav_items",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/components/Sidebar.tsx",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "frontend_src_components_sidebar_tsx",
+      "target": "components_sidebar_sidebar",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "frontend_src_components_sidebar_tsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "components_sidebar_filtervalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_permission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_documentsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_onlyofficeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_apierror",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_listdocuments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_uploaddocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_createblankdocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_geteditorconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_renamedocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L82",
+      "weight": 1.0,
+      "source": "frontend_src_lib_api_ts",
+      "target": "lib_api_downloadurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_editor_tsx",
+      "target": "frontend_src_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "frontend_src_lib_api_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "target": "lib_api_permission"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_createdocument",
+      "target": "lib_api_permission"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "lib_api_documentsummary",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_editor_tsx",
+      "target": "lib_api_onlyofficeconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "lib_api_apierror",
+      "target": "lib_api_apierror_constructor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "lib_api_listdocuments",
+      "target": "lib_api_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L62",
+      "weight": 1.0,
+      "source": "lib_api_createblankdocument",
+      "target": "lib_api_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L70",
+      "weight": 1.0,
+      "source": "lib_api_geteditorconfig",
+      "target": "lib_api_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/api.ts",
+      "source_location": "L74",
+      "weight": 1.0,
+      "source": "lib_api_renamedocument",
+      "target": "lib_api_request",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "lib_api_listdocuments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "lib_api_uploaddocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "lib_api_createblankdocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_editor_tsx",
+      "target": "lib_api_geteditorconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "lib_api_renamedocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_pages_editor_tsx",
+      "target": "lib_api_downloadurl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "pages_editor_editor",
+      "target": "lib_api_downloadurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "frontend_src_lib_filetype_ts",
+      "target": "lib_filetype_filekind",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "frontend_src_lib_filetype_ts",
+      "target": "lib_filetype_filetypeinfo",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_src_lib_filetype_ts",
+      "target": "lib_filetype_docx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "frontend_src_lib_filetype_ts",
+      "target": "lib_filetype_xlsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_src_lib_filetype_ts",
+      "target": "lib_filetype_pptx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "frontend_src_lib_filetype_ts",
+      "target": "lib_filetype_other",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/lib/fileType.ts",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "frontend_src_lib_filetype_ts",
+      "target": "lib_filetype_filetypeof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "frontend_src_lib_filetype_ts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "lib_filetype_filetypeof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/Editor.tsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "frontend_src_pages_editor_tsx",
+      "target": "pages_editor_editor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "pages_documentlist_viewmode",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/src/pages/DocumentList.tsx",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "frontend_src_pages_documentlist_tsx",
+      "target": "pages_documentlist_documentlist",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/DocumentCoreApplication.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_documentcoreapplication_java",
+      "target": "documentcore_documentcoreapplication_documentcoreapplication",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/DocumentCoreApplication.java",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "documentcore_documentcoreapplication_documentcoreapplication",
+      "target": "documentcore_documentcoreapplication_documentcoreapplication_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentRepository.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_repository_documentrepository_java",
+      "target": "repository_documentrepository_documentrepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentRepository.java",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "repository_documentrepository_documentrepository",
+      "target": "repository_documentrepository_documentrepository_findaccessibledocuments",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L45",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_listforuser",
+      "target": "repository_documentrepository_documentrepository_findaccessibledocuments"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentVersionRepository.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_repository_documentversionrepository_java",
+      "target": "repository_documentversionrepository_documentversionrepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentVersionRepository.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "repository_documentversionrepository_documentversionrepository",
+      "target": "repository_documentversionrepository_documentversionrepository_findbydocumentidorderbyversionnumberdesc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentVersionRepository.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "repository_documentversionrepository_documentversionrepository",
+      "target": "repository_documentversionrepository_documentversionrepository_findtopbydocumentidorderbyversionnumberdesc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "service_onlyofficecallbackservice_onlyofficecallbackservice_handlecallback",
+      "target": "repository_documentversionrepository_documentversionrepository_findtopbydocumentidorderbyversionnumberdesc"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentPermissionRepository.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_repository_documentpermissionrepository_java",
+      "target": "repository_documentpermissionrepository_documentpermissionrepository",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/repository/DocumentPermissionRepository.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "repository_documentpermissionrepository_documentpermissionrepository",
+      "target": "repository_documentpermissionrepository_documentpermissionrepository_findbyid_documentidandid_userid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_requirepermission",
+      "target": "repository_documentpermissionrepository_documentpermissionrepository_findbyid_documentidandid_userid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_config_securityconfig_java",
+      "target": "webmvcconfigurer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_config_securityconfig_java",
+      "target": "config_securityconfig_securityconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "config_securityconfig_securityconfig",
+      "target": "webmvcconfigurer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "config_securityconfig_securityconfig",
+      "target": "config_securityconfig_securityconfig_securityconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/SecurityConfig.java",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "config_securityconfig_securityconfig",
+      "target": "config_securityconfig_securityconfig_addcorsmappings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/S3Config.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_config_s3config_java",
+      "target": "config_s3config_s3config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/S3Config.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "config_s3config_s3config",
+      "target": "config_s3config_s3config_s3client",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/config/S3Config.java",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "config_s3config_s3config",
+      "target": "config_s3config_s3config_s3presigner",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/security/LocalUser.java",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_security_localuser_java",
+      "target": "security_localuser_localuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/security/LocalUser.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "security_localuser_localuser",
+      "target": "security_localuser_localuser_localuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_controller_documentcontroller_java",
+      "target": "controller_documentcontroller_documentcontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller",
+      "target": "controller_documentcontroller_documentcontroller_documentcontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller",
+      "target": "controller_documentcontroller_documentcontroller_list",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller",
+      "target": "controller_documentcontroller_documentcontroller_upload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller",
+      "target": "controller_documentcontroller_documentcontroller_createfromtemplate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller",
+      "target": "controller_documentcontroller_documentcontroller_get",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller",
+      "target": "controller_documentcontroller_documentcontroller_rename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L64",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller",
+      "target": "controller_documentcontroller_documentcontroller_editorconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller_list",
+      "target": "service_documentservice_documentservice_listforuser"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L46",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller_upload",
+      "target": "service_documentservice_documentservice_createfromupload"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L56",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller_get",
+      "target": "service_documentservice_documentservice_getdetail"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_extracttoken",
+      "target": "controller_documentcontroller_documentcontroller_get"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_mimetypefortemplateextension",
+      "target": "controller_documentcontroller_documentcontroller_get"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "service_onlyofficecallbackservice_onlyofficecallbackservice_handlecallback",
+      "target": "controller_documentcontroller_documentcontroller_get"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "service_onlyofficecallbackservice_onlyofficecallbackservice_downloadfile",
+      "target": "controller_documentcontroller_documentcontroller_get"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "controller_documentcontroller_documentcontroller_editorconfig",
+      "target": "service_editorconfigservice_editorconfigservice_buildsignedconfig"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_controller_apiexceptionhandler_java",
+      "target": "controller_apiexceptionhandler_apiexceptionhandler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "controller_apiexceptionhandler_apiexceptionhandler",
+      "target": "controller_apiexceptionhandler_apiexceptionhandler_notfound",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "controller_apiexceptionhandler_apiexceptionhandler",
+      "target": "controller_apiexceptionhandler_apiexceptionhandler_forbidden",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/ApiExceptionHandler.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "controller_apiexceptionhandler_apiexceptionhandler",
+      "target": "controller_apiexceptionhandler_apiexceptionhandler_badrequest",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_controller_onlyofficecallbackcontroller_java",
+      "target": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "target": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L63",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "target": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_content",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "target": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_callback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L100",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller",
+      "target": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_extracttoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_content",
+      "target": "service_documentservice_documentservice_loadforeditorconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_content",
+      "target": "service_s3storageservice_s3storageservice_download"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_content",
+      "target": "domain_document_document"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L77",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_callback",
+      "target": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_extracttoken",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_callback",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_verify"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/controller/OnlyOfficeCallbackController.java",
+      "source_location": "L91",
+      "weight": 1.0,
+      "source": "controller_onlyofficecallbackcontroller_onlyofficecallbackcontroller_callback",
+      "target": "service_onlyofficecallbackservice_onlyofficecallbackservice_handlecallback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_s3storageservice_java",
+      "target": "service_s3storageservice_s3storageservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "service_s3storageservice_s3storageservice",
+      "target": "service_s3storageservice_s3storageservice_s3storageservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "service_s3storageservice_s3storageservice",
+      "target": "service_s3storageservice_s3storageservice_upload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "service_s3storageservice_s3storageservice",
+      "target": "service_s3storageservice_s3storageservice_presignedgeturl",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "service_s3storageservice_s3storageservice",
+      "target": "service_s3storageservice_s3storageservice_download",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/ForbiddenException.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_forbiddenexception_java",
+      "target": "service_forbiddenexception_forbiddenexception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/ForbiddenException.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "service_forbiddenexception_forbiddenexception",
+      "target": "runtimeexception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/ForbiddenException.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "service_forbiddenexception_forbiddenexception",
+      "target": "service_forbiddenexception_forbiddenexception_forbiddenexception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "extends",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/NotFoundException.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "service_notfoundexception_notfoundexception",
+      "target": "runtimeexception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_editorconfigservice_java",
+      "target": "service_editorconfigservice_editorconfigservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice",
+      "target": "service_editorconfigservice_editorconfigservice_editorconfigservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice",
+      "target": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "target": "service_documentservice_documentservice_loadforeditorconfig"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "target": "domain_document_document"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_extensionof"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_documenttypefor"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "target": "domain_permissionlevel_allowsedit"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/EditorConfigService.java",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "service_editorconfigservice_editorconfigservice_buildsignedconfig",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_sign"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_documentservice_java",
+      "target": "service_documentservice_documentservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_documentservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L44",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_listforuser",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L48",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_createfromupload",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_createfromtemplate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_createdocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L139",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_rename",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L153",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_getdetail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L166",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_loadforeditorconfig",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L175",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_requirepermission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L181",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice",
+      "target": "service_documentservice_documentservice_todto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_createfromupload",
+      "target": "service_documentservice_documentservice_createdocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_createfromupload",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_extensionof"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L84",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_createfromtemplate",
+      "target": "service_documentservice_documentservice_createdocument",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_createfromtemplate",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_mimetypefortemplateextension"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L136",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_createdocument",
+      "target": "service_documentservice_documentservice_todto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_createdocument",
+      "target": "domain_permissionlevel_dbvalue"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_rename",
+      "target": "service_documentservice_documentservice_requirepermission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L149",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_rename",
+      "target": "service_documentservice_documentservice_todto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L154",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_getdetail",
+      "target": "service_documentservice_documentservice_requirepermission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L159",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_getdetail",
+      "target": "service_documentservice_documentservice_todto",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L167",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_loadforeditorconfig",
+      "target": "service_documentservice_documentservice_requirepermission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java",
+      "source_location": "L172",
+      "weight": 1.0,
+      "source": "service_documentservice_documentservice_loadforeditorconfig",
+      "target": "domain_permissionlevel_fromdbvalue"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_onlyofficedocumenttypes_java",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "service_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "service_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_extensionof",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L36",
+      "weight": 1.0,
+      "source": "service_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_documenttypefor",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeDocumentTypes.java",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "service_onlyofficedocumenttypes_onlyofficedocumenttypes",
+      "target": "service_onlyofficedocumenttypes_onlyofficedocumenttypes_mimetypefortemplateextension",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_onlyofficecallbackservice_java",
+      "target": "service_onlyofficecallbackservice_onlyofficecallbackservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "service_onlyofficecallbackservice_onlyofficecallbackservice",
+      "target": "service_onlyofficecallbackservice_onlyofficecallbackservice_onlyofficecallbackservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "service_onlyofficecallbackservice_onlyofficecallbackservice",
+      "target": "service_onlyofficecallbackservice_onlyofficecallbackservice_handlecallback",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L102",
+      "weight": 1.0,
+      "source": "service_onlyofficecallbackservice_onlyofficecallbackservice",
+      "target": "service_onlyofficecallbackservice_onlyofficecallbackservice_downloadfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeCallbackService.java",
+      "source_location": "L72",
+      "weight": 1.0,
+      "source": "service_onlyofficecallbackservice_onlyofficecallbackservice_handlecallback",
+      "target": "service_onlyofficecallbackservice_onlyofficecallbackservice_downloadfile",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/NotFoundException.java",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_notfoundexception_java",
+      "target": "service_notfoundexception_notfoundexception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/NotFoundException.java",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "service_notfoundexception_notfoundexception",
+      "target": "service_notfoundexception_notfoundexception_notfoundexception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L25",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_service_onlyofficejwtservice_java",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "service_onlyofficejwtservice_onlyofficejwtservice",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_onlyofficejwtservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "service_onlyofficejwtservice_onlyofficejwtservice",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_sign",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "service_onlyofficejwtservice_onlyofficejwtservice",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_verify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L59",
+      "weight": 1.0,
+      "source": "service_onlyofficejwtservice_onlyofficejwtservice",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_requirekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "service_onlyofficejwtservice_onlyofficejwtservice_sign",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_requirekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/service/OnlyOfficeJwtService.java",
+      "source_location": "L51",
+      "weight": 1.0,
+      "source": "service_onlyofficejwtservice_onlyofficejwtservice_verify",
+      "target": "service_onlyofficejwtservice_onlyofficejwtservice_requirekey",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermissionId.java",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_documentpermissionid_java",
+      "target": "serializable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermissionId.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_documentpermissionid_java",
+      "target": "domain_documentpermissionid_documentpermissionid",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermissionId.java",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "domain_documentpermissionid_documentpermissionid",
+      "target": "serializable",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentPermission.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_documentpermission_java",
+      "target": "domain_documentpermission_documentpermission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/Document.java",
+      "source_location": "L23",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_document_java",
+      "target": "domain_document_document",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_permissionlevel_java",
+      "target": "domain_permissionlevel_permissionlevel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L16",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_permissionlevel_java",
+      "target": "domain_permissionlevel_dbvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_permissionlevel_java",
+      "target": "domain_permissionlevel_fromdbvalue",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/PermissionLevel.java",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_permissionlevel_java",
+      "target": "domain_permissionlevel_allowsedit",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/src/main/java/com/officecollab/documentcore/domain/DocumentVersion.java",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "backend_src_main_java_com_officecollab_documentcore_domain_documentversion_java",
+      "target": "domain_documentversion_documentversion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme_md",
+      "target": "officecollaboration_readme_office_collaboration_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_office_collaboration_poc",
+      "target": "officecollaboration_readme_what_s_here",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_office_collaboration_poc",
+      "target": "officecollaboration_readme_assumption_this_whole_build_rests_on",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_office_collaboration_poc",
+      "target": "officecollaboration_readme_before_you_can_run_it",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_office_collaboration_poc",
+      "target": "officecollaboration_readme_running_it",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_office_collaboration_poc",
+      "target": "officecollaboration_readme_what_was_not_verified_in_the_sandbox_this_was_built_in",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_office_collaboration_poc",
+      "target": "officecollaboration_readme_local_dev_without_the_full_docker_compose_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L76",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_office_collaboration_poc",
+      "target": "officecollaboration_readme_what_s_deliberately_not_built_phase_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_what_s_here",
+      "target": "officecollaboration_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L43",
+      "weight": 1.0,
+      "source": "officecollaboration_readme_running_it",
+      "target": "officecollaboration_readme_codeblock_2",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "frontend_readme_md",
+      "target": "frontend_readme_officecollab_frontend_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "frontend_readme_officecollab_frontend_poc",
+      "target": "frontend_readme_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "frontend_readme_officecollab_frontend_poc",
+      "target": "frontend_readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "frontend_readme_officecollab_frontend_poc",
+      "target": "frontend_readme_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "frontend_readme_officecollab_frontend_poc",
+      "target": "frontend_readme_how_it_works",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "frontend_readme_officecollab_frontend_poc",
+      "target": "frontend_readme_simplifications_todos_for_this_poc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "frontend/README.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "frontend_readme_setup",
+      "target": "frontend_readme_codeblock_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "backend_readme_md",
+      "target": "backend_readme_document_core",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "backend_readme_document_core",
+      "target": "backend_readme_running_it",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "backend_readme_document_core",
+      "target": "backend_readme_endpoints_all_under_api_v1_unless_noted",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "backend_readme_document_core",
+      "target": "backend_readme_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "backend_readme_document_core",
+      "target": "backend_readme_deliberate_simplifications_for_this_poc_see_task_description_for_what_s_explicitly_deferred",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L67",
+      "weight": 1.0,
+      "source": "backend_readme_document_core",
+      "target": "backend_readme_things_a_human_still_needs_to_supply",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/README.md",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "backend_readme_running_it",
+      "target": "backend_readme_codeblock_1",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "dd04d4a831cf39c832eea12d773989c3cf8f6c65"
+}

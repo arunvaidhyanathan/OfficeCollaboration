@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="02" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="11" day="19"/>
+        <dmTitle>
+          <techName>Data storage</techName>
+          <infoName>Description</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>OfficeCollaboration project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>OfficeCollaboration project</enterpriseName></originator>
+      <applic><displayText><simplePara>POC build, commit dd04d4a</simplePara></displayText></applic>
+      <brexDmRef><dmRef><dmRefIdent><dmCode modelIdentCode="S1000D" systemDiffCode="H" systemCode="04" subSystemCode="1" subSubSystemCode="0"
+        assyCode="0301" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef></brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>General</title>
+        <para>Metadata is held in PostgreSQL schema <verbatimText>officecollab</verbatimText>
+          (<verbatimText>db/officecollab_poc_schema.sql</verbatimText>). File bytes are held in S3; each version row stores its object key.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>Tables</title>
+        <table frame="all">
+          <title>officecollab schema</title>
+          <tgroup cols="2">
+            <colspec colname="c1"/><colspec colname="c2"/>
+            <thead><row><entry><para>Table</para></entry><entry><para>Columns and rules</para></entry></row></thead>
+            <tbody>
+              <row><entry><para>documents</para></entry>
+                <entry><para>id (uuid, PK), name, mime_type, storage_key, current_version_id, created_by (FK auth.users), created_at, updated_at.</para></entry></row>
+              <row><entry><para>document_versions</para></entry>
+                <entry><para>id (uuid, PK), document_id (FK documents, cascade delete), version_number, storage_key,
+                  onlyoffice_key (unique), created_by (FK auth.users), created_at, size, checksum.</para></entry></row>
+              <row><entry><para>document_permissions</para></entry>
+                <entry><para>document_id (FK documents, cascade delete), user_id (FK auth.users), permission
+                  (one of owner, edit, comment, view), granted_at.</para></entry></row>
+            </tbody>
+          </tgroup>
+        </table>
+        <note><notePara><verbatimText>document_versions</verbatimText> is append-only and unique on (document_id, version_number).
+          <verbatimText>onlyoffice_key</verbatimText> must stay stable per version and is never regenerated per request.</notePara></note>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

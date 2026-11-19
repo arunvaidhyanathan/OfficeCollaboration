@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/descript.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="01" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="040" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="11" day="19"/>
+        <dmTitle>
+          <techName>Document Core service</techName>
+          <infoName>Description of function</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>OfficeCollaboration project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>OfficeCollaboration project</enterpriseName></originator>
+      <applic><displayText><simplePara>POC build, commit dd04d4a</simplePara></displayText></applic>
+      <brexDmRef><dmRef><dmRefIdent><dmCode modelIdentCode="S1000D" systemDiffCode="H" systemCode="04" subSystemCode="1" subSubSystemCode="0"
+        assyCode="0301" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef></brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <description>
+      <levelledPara>
+        <title>General</title>
+        <para>Document Core is a Spring Boot application (package <verbatimText>com.officecollab.documentcore</verbatimText>).
+          It is the only backend service. Controllers delegate to services; services use Spring Data repositories for
+          PostgreSQL and <verbatimText>S3StorageService</verbatimText> for file bytes.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>REST interface</title>
+        <table frame="all">
+          <title>Endpoints</title>
+          <tgroup cols="3">
+            <colspec colname="c1"/><colspec colname="c2"/><colspec colname="c3"/>
+            <thead><row><entry><para>Method</para></entry><entry><para>Path</para></entry><entry><para>Function</para></entry></row></thead>
+            <tbody>
+              <row><entry><para>GET</para></entry><entry><para>/api/v1/documents</para></entry><entry><para>List documents.</para></entry></row>
+              <row><entry><para>POST</para></entry><entry><para>/api/v1/documents (multipart)</para></entry><entry><para>Upload a file as a new document.</para></entry></row>
+              <row><entry><para>POST</para></entry><entry><para>/api/v1/documents/new</para></entry><entry><para>Create a blank docx, xlsx or pptx from a bundled template.</para></entry></row>
+              <row><entry><para>GET</para></entry><entry><para>/api/v1/documents/{id}</para></entry><entry><para>Get document detail.</para></entry></row>
+              <row><entry><para>PATCH</para></entry><entry><para>/api/v1/documents/{id}</para></entry><entry><para>Rename a document.</para></entry></row>
+              <row><entry><para>GET</para></entry><entry><para>/api/v1/documents/{id}/editor-config</para></entry><entry><para>Return the signed ONLYOFFICE editor configuration.</para></entry></row>
+              <row><entry><para>GET</para></entry><entry><para>/api/v1/onlyoffice/content</para></entry><entry><para>Serve file bytes to ONLYOFFICE.</para></entry></row>
+              <row><entry><para>POST</para></entry><entry><para>/api/v1/onlyoffice/callback</para></entry><entry><para>Receive save notifications from ONLYOFFICE.</para></entry></row>
+            </tbody>
+          </tgroup>
+        </table>
+      </levelledPara>
+      <levelledPara>
+        <title>Internal structure</title>
+        <para>Principal classes, by dependency weight from the code graph:
+        <sequentialList>
+          <listItem><para><verbatimText>DocumentService</verbatimText>: create (upload or template), rename, detail, and editor-config loading. Changing it affects 44 symbols.</para></listItem>
+          <listItem><para><verbatimText>OnlyOfficeCallbackService</verbatimText>: processes callback status 2 and 3, downloads the saved file and records a new version.</para></listItem>
+          <listItem><para><verbatimText>EditorConfigService</verbatimText> and <verbatimText>OnlyOfficeJwtService</verbatimText>: build and sign the editor configuration; verify inbound callback tokens.</para></listItem>
+          <listItem><para><verbatimText>S3StorageService</verbatimText>: put and get objects in the configured bucket.</para></listItem>
+        </sequentialList></para>
+        <para>No circular imports exist. See <verbatimText>docs/codegraph/CODEGRAPH_REPORT.md</verbatimText> and
+          <verbatimText>docs/graphify/GRAPH_REPORT.md</verbatimText>.</para>
+      </levelledPara>
+      <levelledPara>
+        <title>Security</title>
+        <para>ONLYOFFICE and Document Core share the secret <verbatimText>ONLYOFFICE_JWT_SECRET</verbatimText>. Editor
+          configurations are signed with it and callbacks are verified with it. End users are not authenticated in this build.</para>
+      </levelledPara>
+    </description>
+  </content>
+</dmodule>

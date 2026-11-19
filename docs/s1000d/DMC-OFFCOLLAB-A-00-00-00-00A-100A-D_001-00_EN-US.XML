@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dmodule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.s1000d.org/S1000D_5-0/xml_schema_flat/proced.xsd">
+  <identAndStatusSection>
+    <dmAddress>
+      <dmIdent>
+        <dmCode modelIdentCode="OFFCOLLAB" systemDiffCode="A" systemCode="00" subSystemCode="0" subSubSystemCode="0"
+                assyCode="00" disassyCode="00" disassyCodeVariant="A" infoCode="100" infoCodeVariant="A" itemLocationCode="D"/>
+        <language languageIsoCode="en" countryIsoCode="US"/>
+        <issueInfo issueNumber="001" inWork="00"/>
+      </dmIdent>
+      <dmAddressItems>
+        <issueDate year="2026" month="11" day="19"/>
+        <dmTitle>
+          <techName>Office Collaboration Platform</techName>
+          <infoName>Start the local stack</infoName>
+        </dmTitle>
+      </dmAddressItems>
+    </dmAddress>
+    <dmStatus issueType="new">
+      <security securityClassification="01"/>
+      <responsiblePartnerCompany><enterpriseName>OfficeCollaboration project</enterpriseName></responsiblePartnerCompany>
+      <originator><enterpriseName>OfficeCollaboration project</enterpriseName></originator>
+      <applic><displayText><simplePara>POC build, commit dd04d4a</simplePara></displayText></applic>
+      <brexDmRef><dmRef><dmRefIdent><dmCode modelIdentCode="S1000D" systemDiffCode="H" systemCode="04" subSystemCode="1" subSubSystemCode="0"
+        assyCode="0301" disassyCode="00" disassyCodeVariant="A" infoCode="022" infoCodeVariant="A" itemLocationCode="D"/></dmRefIdent></dmRef></brexDmRef>
+      <qualityAssurance><unverified/></qualityAssurance>
+    </dmStatus>
+  </identAndStatusSection>
+  <content>
+    <procedure>
+      <preliminaryRqmts>
+        <reqCondGroup>
+          <reqCondNoRef><reqCond>Docker with Compose, Node.js and npm are installed.</reqCond></reqCondNoRef>
+          <reqCondNoRef><reqCond>An S3 bucket exists. The application does not create it.</reqCond></reqCondNoRef>
+          <reqCondNoRef><reqCond>A PostgreSQL database with the officecollab schema is available.</reqCond></reqCondNoRef>
+        </reqCondGroup>
+        <reqSupportEquips><noSupportEquips/></reqSupportEquips>
+        <reqSupplies><noSupplies/></reqSupplies>
+        <reqSpares><noSpares/></reqSpares>
+        <reqSafety>
+          <safetyRqmts>
+            <caution><warningAndCautionPara>Do not commit the .env file or put real values in .env.example. They contain the database password and the ONLYOFFICE JWT secret.</warningAndCautionPara></caution>
+          </safetyRqmts>
+        </reqSafety>
+      </preliminaryRqmts>
+      <mainProcedure>
+        <proceduralStep>
+          <para>Copy <verbatimText>.env.example</verbatimText> to <verbatimText>.env</verbatimText> in the repository root.</para>
+        </proceduralStep>
+        <proceduralStep>
+          <para>In <verbatimText>.env</verbatimText>, set these values:</para>
+          <proceduralStep><para><verbatimText>ONLYOFFICE_JWT_SECRET</verbatimText>: a random string, for example from <verbatimText>openssl rand -base64 32</verbatimText>.</para></proceduralStep>
+          <proceduralStep><para><verbatimText>SPRING_DATASOURCE_PASSWORD</verbatimText>: the database password.</para></proceduralStep>
+          <proceduralStep><para><verbatimText>AWS_S3_BUCKET</verbatimText>, <verbatimText>AWS_REGION</verbatimText>, <verbatimText>AWS_ACCESS_KEY_ID</verbatimText>, <verbatimText>AWS_SECRET_ACCESS_KEY</verbatimText>.</para></proceduralStep>
+        </proceduralStep>
+        <proceduralStep>
+          <para>Build the frontend. nginx serves <verbatimText>frontend/dist</verbatimText> from a bind mount and does not build it:
+            <verbatimText>cd frontend &amp;&amp; npm install &amp;&amp; npm run build</verbatimText>.</para>
+        </proceduralStep>
+        <proceduralStep>
+          <para>From the repository root, run <verbatimText>docker compose up --build</verbatimText>.</para>
+        </proceduralStep>
+        <proceduralStep>
+          <para>Make sure the services respond:</para>
+          <proceduralStep><para>Application: http://localhost</para></proceduralStep>
+          <proceduralStep><para>Document Core API: http://localhost:8080/api/v1</para></proceduralStep>
+          <proceduralStep><para>ONLYOFFICE Document Server: http://localhost:8082</para></proceduralStep>
+        </proceduralStep>
+      </mainProcedure>
+      <closeRqmts>
+        <reqCondGroup><noConds/></reqCondGroup>
+      </closeRqmts>
+    </procedure>
+  </content>
+</dmodule>

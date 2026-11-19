@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "Office Collaboration POC - System Architecture",
+    "output": "docs/diagrams/system-architecture.html",
+    "quality_profile": "showcase",
+    "locale": "en",
+    "repository": {
+      "url": "https://github.com/arunvaidhyanathan/OfficeCollaboration.git",
+      "provider": "github",
+      "link_mode": "web",
+      "revision": "dd04d4a831cf39c832eea12d773989c3cf8f6c65"
+    }
+  },
+  "components": [
+    { "id": "browser", "type": "external", "label": "User Browser", "sublabel": "SPA + editor iframe", "pos": [40, 200], "size": [140, 60] },
+    { "id": "nginx", "type": "cloud", "label": "nginx", "sublabel": "reverse proxy :80", "pos": [270, 200], "size": [140, 60],
+      "sources": [ { "path": "infra/nginx/nginx.conf", "line": 21, "end_line": 33, "label": "/api/ and / routes" } ] },
+    { "id": "frontend", "type": "frontend", "label": "React SPA", "sublabel": "frontend/dist via nginx", "pos": [270, 360], "size": [140, 60],
+      "sources": [ { "path": "frontend/src/App.tsx", "line": 9, "end_line": 11, "label": "routes" }, { "path": "frontend/src/lib/api.ts", "line": 1, "end_line": 84, "label": "API client" } ] },
+    { "id": "core", "type": "backend", "label": "Document Core", "sublabel": "Spring Boot :8080", "pos": [520, 200], "size": [150, 60],
+      "sources": [ { "path": "backend/src/main/java/com/officecollab/documentcore/controller/DocumentController.java", "line": 27, "end_line": 69, "label": "documents API" }, { "path": "backend/src/main/java/com/officecollab/documentcore/service/DocumentService.java", "line": 26, "end_line": 194 } ] },
+    { "id": "onlyoffice", "type": "backend", "label": "ONLYOFFICE Docs", "sublabel": "Document Server :8082", "pos": [520, 40], "size": [150, 60],
+      "sources": [ { "path": "docker-compose.yml", "line": 19, "end_line": 38, "label": "onlyoffice service" }, { "path": "frontend/src/pages/Editor.tsx", "line": 1, "end_line": 108, "label": "editor embed" } ] },
+    { "id": "pg", "type": "database", "label": "PostgreSQL", "sublabel": "Supabase or local db", "pos": [800, 200], "size": [150, 60],
+      "sources": [ { "path": "db/officecollab_poc_schema.sql", "line": 13, "end_line": 61, "label": "3 tables" } ] },
+    { "id": "s3", "type": "database", "label": "S3 Bucket", "sublabel": "file bytes per version", "pos": [520, 500], "size": [150, 60],
+      "sources": [ { "path": "backend/src/main/java/com/officecollab/documentcore/service/S3StorageService.java", "line": 21, "end_line": 72 } ] }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "docker compose network", "wraps": ["nginx", "frontend", "core", "onlyoffice"] }
+  ],
+  "connections": [
+    { "id": "browser-nginx", "from": "browser", "to": "nginx", "label": "HTTP :80", "variant": "emphasis" },
+    { "id": "nginx-frontend", "from": "nginx", "to": "frontend", "label": "/ static" },
+    { "id": "nginx-core", "from": "nginx", "to": "core", "label": "/api/* proxy", "variant": "emphasis" },
+    { "id": "browser-oo", "from": "browser", "to": "onlyoffice", "label": "editor api.js", "fromSide": "top", "toSide": "left" },
+    { "id": "oo-core", "from": "onlyoffice", "to": "core", "label": "content + callback (JWT)", "variant": "security" },
+    { "id": "core-pg", "from": "core", "to": "pg", "label": "JDBC / JPA" },
+    { "id": "core-s3", "from": "core", "to": "s3", "label": "put / get object" }
+  ],
+  "cards": [
+    { "dot": "emerald", "title": "Document Core API", "items": ["GET/POST /api/v1/documents, POST /new", "GET/PATCH /documents/{id}, GET /{id}/editor-config", "GET /onlyoffice/content, POST /onlyoffice/callback"] },
+    { "dot": "rose", "title": "Trust", "items": ["ONLYOFFICE <-> Core signed with shared ONLYOFFICE_JWT_SECRET", "No end-user auth yet: a fixed LocalUser stands in"] },
+    { "dot": "amber", "title": "Save path", "items": ["Callback status 2 or 3 -> download document.url", "Stored as a new document_versions row + S3 object"] }
+  ]
+}
